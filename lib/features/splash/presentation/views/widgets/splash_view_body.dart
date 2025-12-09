@@ -1,5 +1,10 @@
+import 'package:bookly_clean_arch/constants.dart';
 import 'package:bookly_clean_arch/core/utils/assets.dart';
+import 'package:bookly_clean_arch/features/home/presentation/views/home_view.dart';
+import 'package:bookly_clean_arch/features/splash/presentation/views/widgets/siliding_text.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -8,7 +13,48 @@ class SplashViewBody extends StatefulWidget {
   State<SplashViewBody> createState() => _SplashViewBodyState();
 }
 
-class _SplashViewBodyState extends State<SplashViewBody> {
+class _SplashViewBodyState extends State<SplashViewBody>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _animationController;
+  late Animation<Offset> _slidingAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+    _animationController = AnimationController(vsync: this);
+  }
+
+  void navigateToHome() {
+    Future.delayed(
+      Duration(seconds: 3),
+      () {
+        Get.to(
+          () => const HomeView(),
+          transition: Transition.leftToRightWithFade,
+          duration: kTranstionDuration,
+        );
+      },
+    );
+  }
+
+  void initSlidingAnimation() {
+    _animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 1),
+    );
+    _animationController.forward();
+    _slidingAnimation = Tween<Offset>(
+      begin: Offset(0, 3),
+      end: Offset.zero,
+    ).animate(_animationController);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _animationController.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -16,12 +62,11 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Image.asset(AssetsData.logo),
-        SizedBox(
-          height: 5,
+        const SizedBox(
+          height: 4,
         ),
-        Text(
-          'Read Free Books',
-          textAlign: TextAlign.center,
+        SlidingText(
+          slidingAnimation: _slidingAnimation,
         ),
       ],
     );
