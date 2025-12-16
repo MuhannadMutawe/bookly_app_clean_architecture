@@ -1,10 +1,8 @@
-import 'package:bookly_clean_arch/constants.dart';
+import 'package:bookly_clean_arch/core/utils/app_router.dart';
 import 'package:bookly_clean_arch/core/utils/assets.dart';
-import 'package:bookly_clean_arch/features/home/presentation/views/home_view.dart';
 import 'package:bookly_clean_arch/features/splash/presentation/views/widgets/siliding_text.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -28,11 +26,13 @@ class _SplashViewBodyState extends State<SplashViewBody>
     Future.delayed(
       Duration(seconds: 3),
       () {
-        Get.to(
-          () => const HomeView(),
-          transition: Transition.leftToRightWithFade,
-          duration: kTranstionDuration,
-        );
+        // Get.to(
+        //   () => const HomeView(),
+        //   transition: Transition.leftToRightWithFade,
+        //   duration: kTranstionDuration,
+        // );
+        // ignore: use_build_context_synchronously
+        context.pushReplacement(AppRouter.khomeView);
       },
     );
   }
