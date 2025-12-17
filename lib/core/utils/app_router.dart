@@ -20,7 +20,7 @@ abstract class AppRouter {
       GoRoute(
         path: kbookDetailsView,
         builder: (context, state) => BookDetailsView(),
-      ),
+      ), 
       // GoRoute(
       //   path: kSearchView,
       //   builder: (context, state) => BlocProvider(

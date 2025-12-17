@@ -1,4 +1,3 @@
-import 'package:bookly_clean_arch/constants.dart';
 import 'package:bookly_clean_arch/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -15,10 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: kPrimaryColor,
+      theme: ThemeData.light().copyWith(
+        // scaffoldBackgroundColor: kPrimaryColor,
         textTheme: GoogleFonts.montserratTextTheme(
-          ThemeData.dark().textTheme,
+          ThemeData.light().textTheme,
         ),
       ),
     );
