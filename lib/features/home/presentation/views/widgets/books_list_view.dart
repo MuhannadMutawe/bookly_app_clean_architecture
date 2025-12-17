@@ -1,6 +1,8 @@
+import 'package:bookly_clean_arch/core/utils/app_router.dart';
 import 'package:bookly_clean_arch/core/utils/assets.dart';
 import 'package:bookly_clean_arch/features/home/presentation/views/widgets/books_image_view_item.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class BooksListView extends StatelessWidget {
   const BooksListView({super.key});
@@ -16,7 +18,9 @@ class BooksListView extends StatelessWidget {
         itemBuilder: (context, index) => Padding(
           padding: EdgeInsets.symmetric(horizontal: 8),
           child: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              context.push(AppRouter.kbookDetailsView);
+            },
             child: BooksImageviewItem(
               imageUrl: AssetsData.testImage,
             ),

@@ -1,3 +1,4 @@
+import 'package:bookly_clean_arch/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class SlidingText extends StatelessWidget {
@@ -17,6 +18,7 @@ class SlidingText extends StatelessWidget {
         child: const Text(
           'Read Free Books',
           textAlign: TextAlign.center,
+          style: Styles.textStyle16,
         ),
       ),
     );
