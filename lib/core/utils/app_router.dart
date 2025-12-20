@@ -1,5 +1,6 @@
 import 'package:bookly_clean_arch/features/home/presentation/views/book_details_view.dart';
 import 'package:bookly_clean_arch/features/home/presentation/views/home_view.dart';
+import 'package:bookly_clean_arch/features/search/presentation/views/search_view.dart';
 import 'package:bookly_clean_arch/features/splash/presentation/views/splash_view.dart';
 import 'package:go_router/go_router.dart';
 
@@ -20,7 +21,7 @@ abstract class AppRouter {
       GoRoute(
         path: kbookDetailsView,
         builder: (context, state) => BookDetailsView(),
-      ), 
+      ),
       // GoRoute(
       //   path: kSearchView,
       //   builder: (context, state) => BlocProvider(
@@ -30,6 +31,10 @@ abstract class AppRouter {
       //     child: const SearchView(),
       //   ),
       // ),
+      GoRoute(
+        path: kSearchView,
+        builder: (context, state) => SearchView(),
+      ),
     ],
   );
 }
