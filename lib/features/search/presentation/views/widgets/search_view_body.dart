@@ -8,8 +8,9 @@ class SearchViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(right: 30, left: 30, top: 65),
+    return SingleChildScrollView(
+      padding: const EdgeInsets.only(right: 30, left: 30, top: 20),
+      physics: BouncingScrollPhysics(),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -24,9 +25,7 @@ class SearchViewBody extends StatelessWidget {
           SizedBox(
             height: 16,
           ),
-          Expanded(
-            child: ResultSearchListView(),
-          ),
+          ResultSearchListView(),
         ],
       ),
     );
