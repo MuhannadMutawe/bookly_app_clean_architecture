@@ -4,13 +4,13 @@ import 'package:bookly_clean_arch/features/home/domain/entities/book_entities.da
 import 'package:bookly_clean_arch/features/home/domain/repos/home_repo.dart';
 import 'package:dartz/dartz.dart';
 
-class FetchNewestBooksUseCases extends UseCase<List<BookEntities>> {
+class FetchNewestBooksUseCases extends UseCase<List<BookEntity>> {
   final HomeRepo _homeRepo;
 
   FetchNewestBooksUseCases(this._homeRepo);
 
   @override
-  Future<Either<Failure, List<BookEntities>>> call() async {
+  Future<Either<Failure, List<BookEntity>>> call() async {
     // TODO: implement call
     return await _homeRepo.fetchNewestBooks();
   }
