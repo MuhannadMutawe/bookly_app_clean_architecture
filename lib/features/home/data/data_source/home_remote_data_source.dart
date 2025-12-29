@@ -7,10 +7,10 @@ abstract class HomeRemoteDataSource {
   Future<List<BookEntity>> fetchNewestBooks();
 }
 
-class HomeRemoteDataSourceImplementaion extends HomeRemoteDataSource {
+class HomeRemoteDataSourceImplementation extends HomeRemoteDataSource {
   final ApiService _apiService;
 
-  HomeRemoteDataSourceImplementaion(this._apiService);
+  HomeRemoteDataSourceImplementation(this._apiService);
 
   @override
   Future<List<BookEntity>> fetchFeaturedBooks() async {
