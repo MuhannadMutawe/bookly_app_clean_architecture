@@ -1,7 +1,17 @@
 import 'package:bookly_clean_arch/constants.dart';
+import 'package:bookly_clean_arch/core/utils/api_service.dart';
 import 'package:bookly_clean_arch/core/utils/app_router.dart';
+import 'package:bookly_clean_arch/features/home/data/data_source/home_local_data_source.dart';
+import 'package:bookly_clean_arch/features/home/data/data_source/home_remote_data_source.dart';
+import 'package:bookly_clean_arch/features/home/data/repos/home_repo_implementation.dart';
 import 'package:bookly_clean_arch/features/home/domain/entities/book_entity.dart';
+import 'package:bookly_clean_arch/features/home/domain/use_cases/fetch_featured_books_use_cases.dart';
+import 'package:bookly_clean_arch/features/home/domain/use_cases/fetch_newest_books_use_cases.dart';
+import 'package:bookly_clean_arch/features/home/presentation/manger/cubit/newest_books_cubit.dart';
+import 'package:bookly_clean_arch/features/home/presentation/manger/featured_books/featured_books_cubit.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive_flutter/adapters.dart';
 
@@ -18,13 +28,45 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerConfig: AppRouter.router,
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.light().copyWith(
-        // scaffoldBackgroundColor: kPrimaryColor,
-        textTheme: GoogleFonts.montserratTextTheme(
-          ThemeData.light().textTheme,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => FeaturedBooksCubit(
+            FetchFeaturedBooksUseCases(
+              HomeRepoImplementation(
+                homeLocalDataSource: HomeLocalDataSourceImplementation(),
+                homeRemoteDataSource: HomeRemoteDataSourceImplementation(
+                  ApiService(
+                    Dio(),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+        BlocProvider(
+          create: (context) => NewestBooksCubit(
+            FetchNewestBooksUseCases(
+              HomeRepoImplementation(
+                homeLocalDataSource: HomeLocalDataSourceImplementation(),
+                homeRemoteDataSource: HomeRemoteDataSourceImplementation(
+                  (ApiService(
+                    Dio(),
+                  )),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
+      child: MaterialApp.router(
+        routerConfig: AppRouter.router,
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData.light().copyWith(
+          // scaffoldBackgroundColor: kPrimaryColor,
+          textTheme: GoogleFonts.montserratTextTheme(
+            ThemeData.light().textTheme,
+          ),
         ),
       ),
     );
