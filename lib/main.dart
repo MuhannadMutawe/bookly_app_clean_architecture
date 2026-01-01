@@ -1,6 +1,7 @@
 import 'package:bookly_clean_arch/constants.dart';
 import 'package:bookly_clean_arch/core/utils/app_router.dart';
 import 'package:bookly_clean_arch/core/utils/functions/setup_service_locator.dart';
+import 'package:bookly_clean_arch/core/utils/simple_bloc_observer.dart';
 import 'package:bookly_clean_arch/features/home/data/repos/home_repo_implementation.dart';
 import 'package:bookly_clean_arch/features/home/domain/entities/book_entity.dart';
 import 'package:bookly_clean_arch/features/home/domain/use_cases/fetch_featured_books_use_cases.dart';
@@ -18,6 +19,7 @@ void main() async {
   await Hive.openBox<BookEntity>(kFeaturedBox);
   await Hive.openBox<BookEntity>(kNewestBox);
   setupServiceLocator();
+  Bloc.observer = SimpleBlocObserver();
   runApp(const MyApp());
 }
 
