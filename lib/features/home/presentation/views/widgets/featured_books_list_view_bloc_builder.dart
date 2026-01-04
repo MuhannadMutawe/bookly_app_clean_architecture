@@ -18,7 +18,9 @@ class FeaturedBooksListViewBlocBuilder extends StatelessWidget {
           return CircularProgressIndicator();
         },
         success: (books) {
-          return BooksListView();
+          return BooksListView(
+            books: books,
+          );
         },
         failure: (errorMassage) {
           return SizedBox();

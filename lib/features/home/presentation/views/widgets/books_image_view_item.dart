@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class BooksImageviewItem extends StatelessWidget {
@@ -14,7 +15,13 @@ class BooksImageviewItem extends StatelessWidget {
       borderRadius: BorderRadius.circular(16),
       child: AspectRatio(
         aspectRatio: 2.7 / 4,
-        child: Image.asset(imageUrl),
+        child: CachedNetworkImage(
+          imageUrl: imageUrl,
+          fit: BoxFit.fill,
+          errorWidget: (context, url, error) {
+            return Icon(Icons.warning_rounded);
+          },
+        ),
       ),
     );
   }
