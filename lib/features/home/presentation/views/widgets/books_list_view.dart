@@ -15,7 +15,7 @@ class BooksListView extends StatelessWidget {
     return SizedBox(
       height: MediaQuery.of(context).size.height * 0.3,
       child: ListView.builder(
-        itemCount: 10,
+        itemCount: books.length,
         scrollDirection: Axis.horizontal,
         physics: BouncingScrollPhysics(),
         itemBuilder: (context, index) => Padding(
@@ -25,7 +25,7 @@ class BooksListView extends StatelessWidget {
               context.push(AppRouter.kbookDetailsView);
             },
             child: BooksImageviewItem(
-              imageUrl: books[index].image ?? '',
+              imageUrl: books[index].image ?? AssetsData.imageFormNetwork,
             ),
           ),
         ),
