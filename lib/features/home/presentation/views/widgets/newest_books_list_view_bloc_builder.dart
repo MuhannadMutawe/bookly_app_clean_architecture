@@ -1,3 +1,5 @@
+import 'package:bookly_clean_arch/core/widgets/book_item_shimmer.dart';
+import 'package:bookly_clean_arch/core/widgets/shimmer_books_list_view.dart';
 import 'package:bookly_clean_arch/features/home/presentation/manger/cubit/newest_books_cubit.dart';
 import 'package:bookly_clean_arch/features/home/presentation/manger/cubit/newest_books_state.dart';
 import 'package:bookly_clean_arch/features/home/presentation/views/widgets/featured_books_list_view_bloc_builder.dart';
@@ -17,7 +19,7 @@ class NewestBooksListViewBlocBuilder extends StatelessWidget {
             return SizedBox.shrink();
           },
           loading: () {
-            return FeaturedBooksListViewBlocBuilder();
+            return ShimmerBooksListView();
           },
           success: (books) {
             return NewestBooksListView(
