@@ -1,3 +1,4 @@
+import 'package:bookly_clean_arch/features/home/domain/entities/book_entity.dart';
 import 'package:bookly_clean_arch/features/home/presentation/views/widgets/newest_book_list_view_item.dart';
 import 'package:flutter/material.dart';
 
@@ -12,9 +13,18 @@ class ResultSearchListView extends StatelessWidget {
       physics: NeverScrollableScrollPhysics(),
       itemCount: 10,
       itemBuilder: (context, index) {
-        return const Padding(
+        return Padding(
           padding: EdgeInsets.symmetric(vertical: 10),
-          child: NewestBookListViewItem(),
+          child: NewestBookListViewItem(
+            book: BookEntity(
+              authorName: '',
+              bookId: '',
+              image: '',
+              price: 0,
+              rating: 10,
+              title: 'adf',
+            ),
+          ),
         );
       },
     );
