@@ -1,21 +1,52 @@
 import 'package:bookly_clean_arch/core/utils/app_router.dart';
 import 'package:bookly_clean_arch/core/utils/assets.dart';
 import 'package:bookly_clean_arch/features/home/domain/entities/book_entity.dart';
+import 'package:bookly_clean_arch/features/home/presentation/manger/featured_books/featured_books_cubit.dart';
 import 'package:bookly_clean_arch/features/home/presentation/views/widgets/books_image_view_item.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-class BooksListView extends StatelessWidget {
+class BooksListView extends StatefulWidget {
   const BooksListView({super.key, required this.books});
 
   final List<BookEntity> books;
+
+  @override
+  State<BooksListView> createState() => _BooksListViewState();
+}
+
+class _BooksListViewState extends State<BooksListView> {
+  late final ScrollController _scrollController;
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController = ScrollController();
+    _scrollController.addListener(_scrollListener);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _scrollController.dispose();
+  }
+
+  void _scrollListener() {
+    var currentPosition = _scrollController.position.pixels;
+    var maxScrollExtent = _scrollController.position.maxScrollExtent;
+    if (currentPosition >= 0.7 * maxScrollExtent) {
+      BlocProvider.of<FeaturedBooksCubit>(context).fetchFeaturdBooks();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: MediaQuery.of(context).size.height * 0.3,
       child: ListView.builder(
-        itemCount: books.length,
+        controller: _scrollController,
+        itemCount: widget.books.length,
         scrollDirection: Axis.horizontal,
         physics: BouncingScrollPhysics(),
         itemBuilder: (context, index) => Padding(
@@ -25,7 +56,8 @@ class BooksListView extends StatelessWidget {
               context.push(AppRouter.kbookDetailsView);
             },
             child: BooksImageviewItem(
-              imageUrl: books[index].image ?? AssetsData.imageFormNetwork,
+              imageUrl:
+                  widget.books[index].image ?? AssetsData.imageFormNetwork,
             ),
           ),
         ),
