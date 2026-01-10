@@ -8,6 +8,8 @@ class FeaturedBooksState with _$FeaturedBooksState {
   const factory FeaturedBooksState.initial() = _Initial;
 
   const factory FeaturedBooksState.loading() = FeatuerdBooksLaoding;
+  const factory FeaturedBooksState.paginationloading() =
+      FeatuerdBooksPaginationLaoding;
   const factory FeaturedBooksState.success(List<BookEntity> books) =
       FeatuerdBooksSuccess;
   const factory FeaturedBooksState.failure(String errorMassage) =
