@@ -23,6 +23,7 @@ mixin _$FeaturedBooksState {
     required TResult Function() paginationloading,
     required TResult Function(List<BookEntity> books) success,
     required TResult Function(String errorMassage) failure,
+    required TResult Function(String errorMassage) paginationfailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -32,6 +33,7 @@ mixin _$FeaturedBooksState {
     TResult? Function()? paginationloading,
     TResult? Function(List<BookEntity> books)? success,
     TResult? Function(String errorMassage)? failure,
+    TResult? Function(String errorMassage)? paginationfailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -41,6 +43,7 @@ mixin _$FeaturedBooksState {
     TResult Function()? paginationloading,
     TResult Function(List<BookEntity> books)? success,
     TResult Function(String errorMassage)? failure,
+    TResult Function(String errorMassage)? paginationfailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -52,6 +55,8 @@ mixin _$FeaturedBooksState {
         paginationloading,
     required TResult Function(FeatuerdBooksSuccess value) success,
     required TResult Function(FeatuerdBooksFailuer value) failure,
+    required TResult Function(FeatuerdBooksPaginationFailuer value)
+        paginationfailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -61,6 +66,7 @@ mixin _$FeaturedBooksState {
     TResult? Function(FeatuerdBooksPaginationLaoding value)? paginationloading,
     TResult? Function(FeatuerdBooksSuccess value)? success,
     TResult? Function(FeatuerdBooksFailuer value)? failure,
+    TResult? Function(FeatuerdBooksPaginationFailuer value)? paginationfailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -70,6 +76,7 @@ mixin _$FeaturedBooksState {
     TResult Function(FeatuerdBooksPaginationLaoding value)? paginationloading,
     TResult Function(FeatuerdBooksSuccess value)? success,
     TResult Function(FeatuerdBooksFailuer value)? failure,
+    TResult Function(FeatuerdBooksPaginationFailuer value)? paginationfailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -136,6 +143,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() paginationloading,
     required TResult Function(List<BookEntity> books) success,
     required TResult Function(String errorMassage) failure,
+    required TResult Function(String errorMassage) paginationfailure,
   }) {
     return initial();
   }
@@ -148,6 +156,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? paginationloading,
     TResult? Function(List<BookEntity> books)? success,
     TResult? Function(String errorMassage)? failure,
+    TResult? Function(String errorMassage)? paginationfailure,
   }) {
     return initial?.call();
   }
@@ -160,6 +169,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? paginationloading,
     TResult Function(List<BookEntity> books)? success,
     TResult Function(String errorMassage)? failure,
+    TResult Function(String errorMassage)? paginationfailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -177,6 +187,8 @@ class _$InitialImpl implements _Initial {
         paginationloading,
     required TResult Function(FeatuerdBooksSuccess value) success,
     required TResult Function(FeatuerdBooksFailuer value) failure,
+    required TResult Function(FeatuerdBooksPaginationFailuer value)
+        paginationfailure,
   }) {
     return initial(this);
   }
@@ -189,6 +201,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(FeatuerdBooksPaginationLaoding value)? paginationloading,
     TResult? Function(FeatuerdBooksSuccess value)? success,
     TResult? Function(FeatuerdBooksFailuer value)? failure,
+    TResult? Function(FeatuerdBooksPaginationFailuer value)? paginationfailure,
   }) {
     return initial?.call(this);
   }
@@ -201,6 +214,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(FeatuerdBooksPaginationLaoding value)? paginationloading,
     TResult Function(FeatuerdBooksSuccess value)? success,
     TResult Function(FeatuerdBooksFailuer value)? failure,
+    TResult Function(FeatuerdBooksPaginationFailuer value)? paginationfailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -258,6 +272,7 @@ class _$FeatuerdBooksLaodingImpl implements FeatuerdBooksLaoding {
     required TResult Function() paginationloading,
     required TResult Function(List<BookEntity> books) success,
     required TResult Function(String errorMassage) failure,
+    required TResult Function(String errorMassage) paginationfailure,
   }) {
     return loading();
   }
@@ -270,6 +285,7 @@ class _$FeatuerdBooksLaodingImpl implements FeatuerdBooksLaoding {
     TResult? Function()? paginationloading,
     TResult? Function(List<BookEntity> books)? success,
     TResult? Function(String errorMassage)? failure,
+    TResult? Function(String errorMassage)? paginationfailure,
   }) {
     return loading?.call();
   }
@@ -282,6 +298,7 @@ class _$FeatuerdBooksLaodingImpl implements FeatuerdBooksLaoding {
     TResult Function()? paginationloading,
     TResult Function(List<BookEntity> books)? success,
     TResult Function(String errorMassage)? failure,
+    TResult Function(String errorMassage)? paginationfailure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -299,6 +316,8 @@ class _$FeatuerdBooksLaodingImpl implements FeatuerdBooksLaoding {
         paginationloading,
     required TResult Function(FeatuerdBooksSuccess value) success,
     required TResult Function(FeatuerdBooksFailuer value) failure,
+    required TResult Function(FeatuerdBooksPaginationFailuer value)
+        paginationfailure,
   }) {
     return loading(this);
   }
@@ -311,6 +330,7 @@ class _$FeatuerdBooksLaodingImpl implements FeatuerdBooksLaoding {
     TResult? Function(FeatuerdBooksPaginationLaoding value)? paginationloading,
     TResult? Function(FeatuerdBooksSuccess value)? success,
     TResult? Function(FeatuerdBooksFailuer value)? failure,
+    TResult? Function(FeatuerdBooksPaginationFailuer value)? paginationfailure,
   }) {
     return loading?.call(this);
   }
@@ -323,6 +343,7 @@ class _$FeatuerdBooksLaodingImpl implements FeatuerdBooksLaoding {
     TResult Function(FeatuerdBooksPaginationLaoding value)? paginationloading,
     TResult Function(FeatuerdBooksSuccess value)? success,
     TResult Function(FeatuerdBooksFailuer value)? failure,
+    TResult Function(FeatuerdBooksPaginationFailuer value)? paginationfailure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -384,6 +405,7 @@ class _$FeatuerdBooksPaginationLaodingImpl
     required TResult Function() paginationloading,
     required TResult Function(List<BookEntity> books) success,
     required TResult Function(String errorMassage) failure,
+    required TResult Function(String errorMassage) paginationfailure,
   }) {
     return paginationloading();
   }
@@ -396,6 +418,7 @@ class _$FeatuerdBooksPaginationLaodingImpl
     TResult? Function()? paginationloading,
     TResult? Function(List<BookEntity> books)? success,
     TResult? Function(String errorMassage)? failure,
+    TResult? Function(String errorMassage)? paginationfailure,
   }) {
     return paginationloading?.call();
   }
@@ -408,6 +431,7 @@ class _$FeatuerdBooksPaginationLaodingImpl
     TResult Function()? paginationloading,
     TResult Function(List<BookEntity> books)? success,
     TResult Function(String errorMassage)? failure,
+    TResult Function(String errorMassage)? paginationfailure,
     required TResult orElse(),
   }) {
     if (paginationloading != null) {
@@ -425,6 +449,8 @@ class _$FeatuerdBooksPaginationLaodingImpl
         paginationloading,
     required TResult Function(FeatuerdBooksSuccess value) success,
     required TResult Function(FeatuerdBooksFailuer value) failure,
+    required TResult Function(FeatuerdBooksPaginationFailuer value)
+        paginationfailure,
   }) {
     return paginationloading(this);
   }
@@ -437,6 +463,7 @@ class _$FeatuerdBooksPaginationLaodingImpl
     TResult? Function(FeatuerdBooksPaginationLaoding value)? paginationloading,
     TResult? Function(FeatuerdBooksSuccess value)? success,
     TResult? Function(FeatuerdBooksFailuer value)? failure,
+    TResult? Function(FeatuerdBooksPaginationFailuer value)? paginationfailure,
   }) {
     return paginationloading?.call(this);
   }
@@ -449,6 +476,7 @@ class _$FeatuerdBooksPaginationLaodingImpl
     TResult Function(FeatuerdBooksPaginationLaoding value)? paginationloading,
     TResult Function(FeatuerdBooksSuccess value)? success,
     TResult Function(FeatuerdBooksFailuer value)? failure,
+    TResult Function(FeatuerdBooksPaginationFailuer value)? paginationfailure,
     required TResult orElse(),
   }) {
     if (paginationloading != null) {
@@ -541,6 +569,7 @@ class _$FeatuerdBooksSuccessImpl implements FeatuerdBooksSuccess {
     required TResult Function() paginationloading,
     required TResult Function(List<BookEntity> books) success,
     required TResult Function(String errorMassage) failure,
+    required TResult Function(String errorMassage) paginationfailure,
   }) {
     return success(books);
   }
@@ -553,6 +582,7 @@ class _$FeatuerdBooksSuccessImpl implements FeatuerdBooksSuccess {
     TResult? Function()? paginationloading,
     TResult? Function(List<BookEntity> books)? success,
     TResult? Function(String errorMassage)? failure,
+    TResult? Function(String errorMassage)? paginationfailure,
   }) {
     return success?.call(books);
   }
@@ -565,6 +595,7 @@ class _$FeatuerdBooksSuccessImpl implements FeatuerdBooksSuccess {
     TResult Function()? paginationloading,
     TResult Function(List<BookEntity> books)? success,
     TResult Function(String errorMassage)? failure,
+    TResult Function(String errorMassage)? paginationfailure,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -582,6 +613,8 @@ class _$FeatuerdBooksSuccessImpl implements FeatuerdBooksSuccess {
         paginationloading,
     required TResult Function(FeatuerdBooksSuccess value) success,
     required TResult Function(FeatuerdBooksFailuer value) failure,
+    required TResult Function(FeatuerdBooksPaginationFailuer value)
+        paginationfailure,
   }) {
     return success(this);
   }
@@ -594,6 +627,7 @@ class _$FeatuerdBooksSuccessImpl implements FeatuerdBooksSuccess {
     TResult? Function(FeatuerdBooksPaginationLaoding value)? paginationloading,
     TResult? Function(FeatuerdBooksSuccess value)? success,
     TResult? Function(FeatuerdBooksFailuer value)? failure,
+    TResult? Function(FeatuerdBooksPaginationFailuer value)? paginationfailure,
   }) {
     return success?.call(this);
   }
@@ -606,6 +640,7 @@ class _$FeatuerdBooksSuccessImpl implements FeatuerdBooksSuccess {
     TResult Function(FeatuerdBooksPaginationLaoding value)? paginationloading,
     TResult Function(FeatuerdBooksSuccess value)? success,
     TResult Function(FeatuerdBooksFailuer value)? failure,
+    TResult Function(FeatuerdBooksPaginationFailuer value)? paginationfailure,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -697,6 +732,7 @@ class _$FeatuerdBooksFailuerImpl implements FeatuerdBooksFailuer {
     required TResult Function() paginationloading,
     required TResult Function(List<BookEntity> books) success,
     required TResult Function(String errorMassage) failure,
+    required TResult Function(String errorMassage) paginationfailure,
   }) {
     return failure(errorMassage);
   }
@@ -709,6 +745,7 @@ class _$FeatuerdBooksFailuerImpl implements FeatuerdBooksFailuer {
     TResult? Function()? paginationloading,
     TResult? Function(List<BookEntity> books)? success,
     TResult? Function(String errorMassage)? failure,
+    TResult? Function(String errorMassage)? paginationfailure,
   }) {
     return failure?.call(errorMassage);
   }
@@ -721,6 +758,7 @@ class _$FeatuerdBooksFailuerImpl implements FeatuerdBooksFailuer {
     TResult Function()? paginationloading,
     TResult Function(List<BookEntity> books)? success,
     TResult Function(String errorMassage)? failure,
+    TResult Function(String errorMassage)? paginationfailure,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -738,6 +776,8 @@ class _$FeatuerdBooksFailuerImpl implements FeatuerdBooksFailuer {
         paginationloading,
     required TResult Function(FeatuerdBooksSuccess value) success,
     required TResult Function(FeatuerdBooksFailuer value) failure,
+    required TResult Function(FeatuerdBooksPaginationFailuer value)
+        paginationfailure,
   }) {
     return failure(this);
   }
@@ -750,6 +790,7 @@ class _$FeatuerdBooksFailuerImpl implements FeatuerdBooksFailuer {
     TResult? Function(FeatuerdBooksPaginationLaoding value)? paginationloading,
     TResult? Function(FeatuerdBooksSuccess value)? success,
     TResult? Function(FeatuerdBooksFailuer value)? failure,
+    TResult? Function(FeatuerdBooksPaginationFailuer value)? paginationfailure,
   }) {
     return failure?.call(this);
   }
@@ -762,6 +803,7 @@ class _$FeatuerdBooksFailuerImpl implements FeatuerdBooksFailuer {
     TResult Function(FeatuerdBooksPaginationLaoding value)? paginationloading,
     TResult Function(FeatuerdBooksSuccess value)? success,
     TResult Function(FeatuerdBooksFailuer value)? failure,
+    TResult Function(FeatuerdBooksPaginationFailuer value)? paginationfailure,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -778,5 +820,173 @@ abstract class FeatuerdBooksFailuer implements FeaturedBooksState {
   String get errorMassage;
   @JsonKey(ignore: true)
   _$$FeatuerdBooksFailuerImplCopyWith<_$FeatuerdBooksFailuerImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FeatuerdBooksPaginationFailuerImplCopyWith<$Res> {
+  factory _$$FeatuerdBooksPaginationFailuerImplCopyWith(
+          _$FeatuerdBooksPaginationFailuerImpl value,
+          $Res Function(_$FeatuerdBooksPaginationFailuerImpl) then) =
+      __$$FeatuerdBooksPaginationFailuerImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String errorMassage});
+}
+
+/// @nodoc
+class __$$FeatuerdBooksPaginationFailuerImplCopyWithImpl<$Res>
+    extends _$FeaturedBooksStateCopyWithImpl<$Res,
+        _$FeatuerdBooksPaginationFailuerImpl>
+    implements _$$FeatuerdBooksPaginationFailuerImplCopyWith<$Res> {
+  __$$FeatuerdBooksPaginationFailuerImplCopyWithImpl(
+      _$FeatuerdBooksPaginationFailuerImpl _value,
+      $Res Function(_$FeatuerdBooksPaginationFailuerImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? errorMassage = null,
+  }) {
+    return _then(_$FeatuerdBooksPaginationFailuerImpl(
+      null == errorMassage
+          ? _value.errorMassage
+          : errorMassage // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FeatuerdBooksPaginationFailuerImpl
+    implements FeatuerdBooksPaginationFailuer {
+  const _$FeatuerdBooksPaginationFailuerImpl(this.errorMassage);
+
+  @override
+  final String errorMassage;
+
+  @override
+  String toString() {
+    return 'FeaturedBooksState.paginationfailure(errorMassage: $errorMassage)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FeatuerdBooksPaginationFailuerImpl &&
+            (identical(other.errorMassage, errorMassage) ||
+                other.errorMassage == errorMassage));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, errorMassage);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FeatuerdBooksPaginationFailuerImplCopyWith<
+          _$FeatuerdBooksPaginationFailuerImpl>
+      get copyWith => __$$FeatuerdBooksPaginationFailuerImplCopyWithImpl<
+          _$FeatuerdBooksPaginationFailuerImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() paginationloading,
+    required TResult Function(List<BookEntity> books) success,
+    required TResult Function(String errorMassage) failure,
+    required TResult Function(String errorMassage) paginationfailure,
+  }) {
+    return paginationfailure(errorMassage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? paginationloading,
+    TResult? Function(List<BookEntity> books)? success,
+    TResult? Function(String errorMassage)? failure,
+    TResult? Function(String errorMassage)? paginationfailure,
+  }) {
+    return paginationfailure?.call(errorMassage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? paginationloading,
+    TResult Function(List<BookEntity> books)? success,
+    TResult Function(String errorMassage)? failure,
+    TResult Function(String errorMassage)? paginationfailure,
+    required TResult orElse(),
+  }) {
+    if (paginationfailure != null) {
+      return paginationfailure(errorMassage);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(FeatuerdBooksLaoding value) loading,
+    required TResult Function(FeatuerdBooksPaginationLaoding value)
+        paginationloading,
+    required TResult Function(FeatuerdBooksSuccess value) success,
+    required TResult Function(FeatuerdBooksFailuer value) failure,
+    required TResult Function(FeatuerdBooksPaginationFailuer value)
+        paginationfailure,
+  }) {
+    return paginationfailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(FeatuerdBooksLaoding value)? loading,
+    TResult? Function(FeatuerdBooksPaginationLaoding value)? paginationloading,
+    TResult? Function(FeatuerdBooksSuccess value)? success,
+    TResult? Function(FeatuerdBooksFailuer value)? failure,
+    TResult? Function(FeatuerdBooksPaginationFailuer value)? paginationfailure,
+  }) {
+    return paginationfailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(FeatuerdBooksLaoding value)? loading,
+    TResult Function(FeatuerdBooksPaginationLaoding value)? paginationloading,
+    TResult Function(FeatuerdBooksSuccess value)? success,
+    TResult Function(FeatuerdBooksFailuer value)? failure,
+    TResult Function(FeatuerdBooksPaginationFailuer value)? paginationfailure,
+    required TResult orElse(),
+  }) {
+    if (paginationfailure != null) {
+      return paginationfailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FeatuerdBooksPaginationFailuer implements FeaturedBooksState {
+  const factory FeatuerdBooksPaginationFailuer(final String errorMassage) =
+      _$FeatuerdBooksPaginationFailuerImpl;
+
+  String get errorMassage;
+  @JsonKey(ignore: true)
+  _$$FeatuerdBooksPaginationFailuerImplCopyWith<
+          _$FeatuerdBooksPaginationFailuerImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

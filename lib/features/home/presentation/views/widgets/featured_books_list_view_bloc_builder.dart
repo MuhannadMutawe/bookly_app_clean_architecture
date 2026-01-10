@@ -27,6 +27,18 @@ class _FeaturedBooksListViewBlocBuilderState
           success: (books) {
             this.books.addAll(books);
           },
+          paginationfailure: (errorMassage) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                backgroundColor: Colors.red,
+                content: Text(
+                  errorMassage,
+                  style: TextStyle(color: Colors.white),
+                ),
+                duration: const Duration(seconds: 3),
+              ),
+            );
+          },
         );
       },
       builder: (context, state) => state.when(
@@ -42,6 +54,11 @@ class _FeaturedBooksListViewBlocBuilderState
           );
         },
         paginationloading: () {
+          return BooksListView(
+            books: books,
+          );
+        },
+        paginationfailure: (errorMassage) {
           return BooksListView(
             books: books,
           );
