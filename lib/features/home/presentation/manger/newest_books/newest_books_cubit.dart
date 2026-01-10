@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:bookly_clean_arch/features/home/domain/use_cases/fetch_newest_books_use_cases.dart';
-import 'package:bookly_clean_arch/features/home/presentation/manger/cubit/newest_books_state.dart';
+import 'package:bookly_clean_arch/features/home/presentation/manger/newest_books/newest_books_state.dart';
 
 class NewestBooksCubit extends Cubit<NewestBooksState> {
   NewestBooksCubit(this._fetchNewestBooksUseCases)

@@ -6,7 +6,7 @@ import 'package:bookly_clean_arch/features/home/data/repos/home_repo_implementat
 import 'package:bookly_clean_arch/features/home/domain/entities/book_entity.dart';
 import 'package:bookly_clean_arch/features/home/domain/use_cases/fetch_featured_books_use_cases.dart';
 import 'package:bookly_clean_arch/features/home/domain/use_cases/fetch_newest_books_use_cases.dart';
-import 'package:bookly_clean_arch/features/home/presentation/manger/cubit/newest_books_cubit.dart';
+import 'package:bookly_clean_arch/features/home/presentation/manger/newest_books/newest_books_cubit.dart';
 import 'package:bookly_clean_arch/features/home/presentation/manger/featured_books/featured_books_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

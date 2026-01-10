@@ -1,6 +1,6 @@
 import 'package:bookly_clean_arch/core/widgets/shimmer_books_list_view.dart';
-import 'package:bookly_clean_arch/features/home/presentation/manger/cubit/newest_books_cubit.dart';
-import 'package:bookly_clean_arch/features/home/presentation/manger/cubit/newest_books_state.dart';
+import 'package:bookly_clean_arch/features/home/presentation/manger/newest_books/newest_books_cubit.dart';
+import 'package:bookly_clean_arch/features/home/presentation/manger/newest_books/newest_books_state.dart';
 import 'package:bookly_clean_arch/features/home/presentation/views/widgets/newest_books_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
