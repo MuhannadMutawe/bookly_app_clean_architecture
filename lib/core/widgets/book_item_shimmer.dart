@@ -7,7 +7,7 @@ class BookItemShimmer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Shimmer.fromColors(
-      baseColor: Colors.grey.shade800,
+      baseColor: Colors.grey.shade900,
       highlightColor: Colors.grey.shade600,
       enabled: true,
       child: SizedBox(
@@ -18,7 +18,7 @@ class BookItemShimmer extends StatelessWidget {
               height: 130,
               width: 90,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: Colors.grey.shade700,
                 borderRadius: BorderRadius.circular(8),
               ),
             ),
@@ -32,7 +32,7 @@ class BookItemShimmer extends StatelessWidget {
                     height: 20,
                     width: MediaQuery.of(context).size.width * 0.5,
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.grey.shade700,
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
@@ -40,7 +40,7 @@ class BookItemShimmer extends StatelessWidget {
                     height: 20,
                     width: MediaQuery.of(context).size.width * 0.5,
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.grey.shade700,
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
@@ -48,7 +48,7 @@ class BookItemShimmer extends StatelessWidget {
                     height: 16,
                     width: 120,
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.grey.shade700,
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
@@ -59,7 +59,7 @@ class BookItemShimmer extends StatelessWidget {
                         height: 20,
                         width: 40,
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Colors.grey.shade700,
                           borderRadius: BorderRadius.circular(8),
                         ),
                       ),
@@ -69,7 +69,7 @@ class BookItemShimmer extends StatelessWidget {
                         height: 20,
                         width: 60,
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Colors.grey.shade700,
                           borderRadius: BorderRadius.circular(8),
                         ),
                       ),
