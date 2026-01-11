@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
 class CustomBooksShimmerLoading extends StatelessWidget {
-  const CustomBooksShimmerLoading({super.key});
+  const CustomBooksShimmerLoading({super.key, this.heightRatio = 0.3});
+
+  final double heightRatio;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +15,7 @@ class CustomBooksShimmerLoading extends StatelessWidget {
       highlightColor: Colors.grey.shade300,
       enabled: true,
       child: SizedBox(
-        height: MediaQuery.of(context).size.height * 0.3,
+        height: MediaQuery.of(context).size.height * heightRatio,
         child: ListView.builder(
           itemCount: 5,
           scrollDirection: Axis.horizontal,

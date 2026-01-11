@@ -1,5 +1,5 @@
 import 'package:bookly_clean_arch/core/utils/styles.dart';
-import 'package:bookly_clean_arch/features/home/presentation/views/widgets/similler_books_list_view.dart';
+import 'package:bookly_clean_arch/features/home/presentation/views/widgets/fetch_similler_books_bloc_builder.dart';
 import 'package:flutter/material.dart';
 
 class SimillerBooksSection extends StatelessWidget {
@@ -19,7 +19,7 @@ class SimillerBooksSection extends StatelessWidget {
         SizedBox(
           height: 25,
         ),
-        SimillerBooksListView(),
+        FetchSimillerBooksBlocBuilder(),
       ],
     );
   }
