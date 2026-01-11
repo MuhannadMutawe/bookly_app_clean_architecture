@@ -7,8 +7,8 @@ class BookItemShimmer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Shimmer.fromColors(
-      baseColor: Colors.grey.shade900,
-      highlightColor: Colors.grey.shade600,
+      baseColor: Colors.grey.shade500,
+      highlightColor: Colors.grey.shade300,
       enabled: true,
       child: SizedBox(
         height: 130,
