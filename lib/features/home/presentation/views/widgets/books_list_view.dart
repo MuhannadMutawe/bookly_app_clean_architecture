@@ -61,7 +61,10 @@ class _BooksListViewState extends State<BooksListView> {
           padding: EdgeInsets.symmetric(horizontal: 8),
           child: GestureDetector(
             onTap: () {
-              context.push(AppRouter.kbookDetailsView);
+              context.push(
+                AppRouter.kbookDetailsView,
+                extra: widget.books[index],
+              );
             },
             child: BooksImageviewItem(
               imageUrl:
