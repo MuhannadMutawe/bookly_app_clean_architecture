@@ -49,7 +49,7 @@ class NewestBookListViewItem extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    book.authorName?[0] ?? '',
+                    'book.authorName?[0]',
                     style: Styles.textStyle14,
                   ),
                   Row(

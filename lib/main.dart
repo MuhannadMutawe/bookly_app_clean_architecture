@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
             FetchNewestBooksUseCases(
               getIt.get<HomeRepoImplementation>(),
             ),
-          ),
+          )..fetchNewestBooks(),
         ),
       ],
       child: MaterialApp.router(
