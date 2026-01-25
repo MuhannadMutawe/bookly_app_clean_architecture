@@ -7,9 +7,17 @@ part 'newest_books_state.freezed.dart';
 class NewestBooksState with _$NewestBooksState {
   const factory NewestBooksState.initial() = _Initial;
 
-  const factory NewestBooksState.loading() = FeatuerdBooksLaoding;
+  const factory NewestBooksState.loading() = NewestBooksLaoding;
+
+  const factory NewestBooksState.paginationloading() =
+      NewestBooksPaginationLaoding;
+
   const factory NewestBooksState.success(List<BookEntity> books) =
-      FeatuerdBooksSuccess;
+      NewestBooksSuccess;
+
   const factory NewestBooksState.failure(String errorMassage) =
-      FeatuerdBooksFailuer;
+      NewestBooksFailuer;
+
+  const factory NewestBooksState.paginationfailure(String errorMassage) =
+      NewestBooksPaginationFailuer;
 }

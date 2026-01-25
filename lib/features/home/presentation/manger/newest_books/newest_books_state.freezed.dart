@@ -20,49 +20,63 @@ mixin _$NewestBooksState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() paginationloading,
     required TResult Function(List<BookEntity> books) success,
     required TResult Function(String errorMassage) failure,
+    required TResult Function(String errorMassage) paginationfailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? paginationloading,
     TResult? Function(List<BookEntity> books)? success,
     TResult? Function(String errorMassage)? failure,
+    TResult? Function(String errorMassage)? paginationfailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? paginationloading,
     TResult Function(List<BookEntity> books)? success,
     TResult Function(String errorMassage)? failure,
+    TResult Function(String errorMassage)? paginationfailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(FeatuerdBooksLaoding value) loading,
-    required TResult Function(FeatuerdBooksSuccess value) success,
-    required TResult Function(FeatuerdBooksFailuer value) failure,
+    required TResult Function(NewestBooksLaoding value) loading,
+    required TResult Function(NewestBooksPaginationLaoding value)
+        paginationloading,
+    required TResult Function(NewestBooksSuccess value) success,
+    required TResult Function(NewestBooksFailuer value) failure,
+    required TResult Function(NewestBooksPaginationFailuer value)
+        paginationfailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(FeatuerdBooksLaoding value)? loading,
-    TResult? Function(FeatuerdBooksSuccess value)? success,
-    TResult? Function(FeatuerdBooksFailuer value)? failure,
+    TResult? Function(NewestBooksLaoding value)? loading,
+    TResult? Function(NewestBooksPaginationLaoding value)? paginationloading,
+    TResult? Function(NewestBooksSuccess value)? success,
+    TResult? Function(NewestBooksFailuer value)? failure,
+    TResult? Function(NewestBooksPaginationFailuer value)? paginationfailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(FeatuerdBooksLaoding value)? loading,
-    TResult Function(FeatuerdBooksSuccess value)? success,
-    TResult Function(FeatuerdBooksFailuer value)? failure,
+    TResult Function(NewestBooksLaoding value)? loading,
+    TResult Function(NewestBooksPaginationLaoding value)? paginationloading,
+    TResult Function(NewestBooksSuccess value)? success,
+    TResult Function(NewestBooksFailuer value)? failure,
+    TResult Function(NewestBooksPaginationFailuer value)? paginationfailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -126,8 +140,10 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() paginationloading,
     required TResult Function(List<BookEntity> books) success,
     required TResult Function(String errorMassage) failure,
+    required TResult Function(String errorMassage) paginationfailure,
   }) {
     return initial();
   }
@@ -137,8 +153,10 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? paginationloading,
     TResult? Function(List<BookEntity> books)? success,
     TResult? Function(String errorMassage)? failure,
+    TResult? Function(String errorMassage)? paginationfailure,
   }) {
     return initial?.call();
   }
@@ -148,8 +166,10 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? paginationloading,
     TResult Function(List<BookEntity> books)? success,
     TResult Function(String errorMassage)? failure,
+    TResult Function(String errorMassage)? paginationfailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -162,9 +182,13 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(FeatuerdBooksLaoding value) loading,
-    required TResult Function(FeatuerdBooksSuccess value) success,
-    required TResult Function(FeatuerdBooksFailuer value) failure,
+    required TResult Function(NewestBooksLaoding value) loading,
+    required TResult Function(NewestBooksPaginationLaoding value)
+        paginationloading,
+    required TResult Function(NewestBooksSuccess value) success,
+    required TResult Function(NewestBooksFailuer value) failure,
+    required TResult Function(NewestBooksPaginationFailuer value)
+        paginationfailure,
   }) {
     return initial(this);
   }
@@ -173,9 +197,11 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(FeatuerdBooksLaoding value)? loading,
-    TResult? Function(FeatuerdBooksSuccess value)? success,
-    TResult? Function(FeatuerdBooksFailuer value)? failure,
+    TResult? Function(NewestBooksLaoding value)? loading,
+    TResult? Function(NewestBooksPaginationLaoding value)? paginationloading,
+    TResult? Function(NewestBooksSuccess value)? success,
+    TResult? Function(NewestBooksFailuer value)? failure,
+    TResult? Function(NewestBooksPaginationFailuer value)? paginationfailure,
   }) {
     return initial?.call(this);
   }
@@ -184,9 +210,11 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(FeatuerdBooksLaoding value)? loading,
-    TResult Function(FeatuerdBooksSuccess value)? success,
-    TResult Function(FeatuerdBooksFailuer value)? failure,
+    TResult Function(NewestBooksLaoding value)? loading,
+    TResult Function(NewestBooksPaginationLaoding value)? paginationloading,
+    TResult Function(NewestBooksSuccess value)? success,
+    TResult Function(NewestBooksFailuer value)? failure,
+    TResult Function(NewestBooksPaginationFailuer value)? paginationfailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -201,25 +229,25 @@ abstract class _Initial implements NewestBooksState {
 }
 
 /// @nodoc
-abstract class _$$FeatuerdBooksLaodingImplCopyWith<$Res> {
-  factory _$$FeatuerdBooksLaodingImplCopyWith(_$FeatuerdBooksLaodingImpl value,
-          $Res Function(_$FeatuerdBooksLaodingImpl) then) =
-      __$$FeatuerdBooksLaodingImplCopyWithImpl<$Res>;
+abstract class _$$NewestBooksLaodingImplCopyWith<$Res> {
+  factory _$$NewestBooksLaodingImplCopyWith(_$NewestBooksLaodingImpl value,
+          $Res Function(_$NewestBooksLaodingImpl) then) =
+      __$$NewestBooksLaodingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$FeatuerdBooksLaodingImplCopyWithImpl<$Res>
-    extends _$NewestBooksStateCopyWithImpl<$Res, _$FeatuerdBooksLaodingImpl>
-    implements _$$FeatuerdBooksLaodingImplCopyWith<$Res> {
-  __$$FeatuerdBooksLaodingImplCopyWithImpl(_$FeatuerdBooksLaodingImpl _value,
-      $Res Function(_$FeatuerdBooksLaodingImpl) _then)
+class __$$NewestBooksLaodingImplCopyWithImpl<$Res>
+    extends _$NewestBooksStateCopyWithImpl<$Res, _$NewestBooksLaodingImpl>
+    implements _$$NewestBooksLaodingImplCopyWith<$Res> {
+  __$$NewestBooksLaodingImplCopyWithImpl(_$NewestBooksLaodingImpl _value,
+      $Res Function(_$NewestBooksLaodingImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$FeatuerdBooksLaodingImpl implements FeatuerdBooksLaoding {
-  const _$FeatuerdBooksLaodingImpl();
+class _$NewestBooksLaodingImpl implements NewestBooksLaoding {
+  const _$NewestBooksLaodingImpl();
 
   @override
   String toString() {
@@ -229,8 +257,7 @@ class _$FeatuerdBooksLaodingImpl implements FeatuerdBooksLaoding {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$FeatuerdBooksLaodingImpl);
+        (other.runtimeType == runtimeType && other is _$NewestBooksLaodingImpl);
   }
 
   @override
@@ -241,8 +268,10 @@ class _$FeatuerdBooksLaodingImpl implements FeatuerdBooksLaoding {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() paginationloading,
     required TResult Function(List<BookEntity> books) success,
     required TResult Function(String errorMassage) failure,
+    required TResult Function(String errorMassage) paginationfailure,
   }) {
     return loading();
   }
@@ -252,8 +281,10 @@ class _$FeatuerdBooksLaodingImpl implements FeatuerdBooksLaoding {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? paginationloading,
     TResult? Function(List<BookEntity> books)? success,
     TResult? Function(String errorMassage)? failure,
+    TResult? Function(String errorMassage)? paginationfailure,
   }) {
     return loading?.call();
   }
@@ -263,8 +294,10 @@ class _$FeatuerdBooksLaodingImpl implements FeatuerdBooksLaoding {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? paginationloading,
     TResult Function(List<BookEntity> books)? success,
     TResult Function(String errorMassage)? failure,
+    TResult Function(String errorMassage)? paginationfailure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -277,9 +310,13 @@ class _$FeatuerdBooksLaodingImpl implements FeatuerdBooksLaoding {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(FeatuerdBooksLaoding value) loading,
-    required TResult Function(FeatuerdBooksSuccess value) success,
-    required TResult Function(FeatuerdBooksFailuer value) failure,
+    required TResult Function(NewestBooksLaoding value) loading,
+    required TResult Function(NewestBooksPaginationLaoding value)
+        paginationloading,
+    required TResult Function(NewestBooksSuccess value) success,
+    required TResult Function(NewestBooksFailuer value) failure,
+    required TResult Function(NewestBooksPaginationFailuer value)
+        paginationfailure,
   }) {
     return loading(this);
   }
@@ -288,9 +325,11 @@ class _$FeatuerdBooksLaodingImpl implements FeatuerdBooksLaoding {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(FeatuerdBooksLaoding value)? loading,
-    TResult? Function(FeatuerdBooksSuccess value)? success,
-    TResult? Function(FeatuerdBooksFailuer value)? failure,
+    TResult? Function(NewestBooksLaoding value)? loading,
+    TResult? Function(NewestBooksPaginationLaoding value)? paginationloading,
+    TResult? Function(NewestBooksSuccess value)? success,
+    TResult? Function(NewestBooksFailuer value)? failure,
+    TResult? Function(NewestBooksPaginationFailuer value)? paginationfailure,
   }) {
     return loading?.call(this);
   }
@@ -299,9 +338,11 @@ class _$FeatuerdBooksLaodingImpl implements FeatuerdBooksLaoding {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(FeatuerdBooksLaoding value)? loading,
-    TResult Function(FeatuerdBooksSuccess value)? success,
-    TResult Function(FeatuerdBooksFailuer value)? failure,
+    TResult Function(NewestBooksLaoding value)? loading,
+    TResult Function(NewestBooksPaginationLaoding value)? paginationloading,
+    TResult Function(NewestBooksSuccess value)? success,
+    TResult Function(NewestBooksFailuer value)? failure,
+    TResult Function(NewestBooksPaginationFailuer value)? paginationfailure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -311,25 +352,159 @@ class _$FeatuerdBooksLaodingImpl implements FeatuerdBooksLaoding {
   }
 }
 
-abstract class FeatuerdBooksLaoding implements NewestBooksState {
-  const factory FeatuerdBooksLaoding() = _$FeatuerdBooksLaodingImpl;
+abstract class NewestBooksLaoding implements NewestBooksState {
+  const factory NewestBooksLaoding() = _$NewestBooksLaodingImpl;
 }
 
 /// @nodoc
-abstract class _$$FeatuerdBooksSuccessImplCopyWith<$Res> {
-  factory _$$FeatuerdBooksSuccessImplCopyWith(_$FeatuerdBooksSuccessImpl value,
-          $Res Function(_$FeatuerdBooksSuccessImpl) then) =
-      __$$FeatuerdBooksSuccessImplCopyWithImpl<$Res>;
+abstract class _$$NewestBooksPaginationLaodingImplCopyWith<$Res> {
+  factory _$$NewestBooksPaginationLaodingImplCopyWith(
+          _$NewestBooksPaginationLaodingImpl value,
+          $Res Function(_$NewestBooksPaginationLaodingImpl) then) =
+      __$$NewestBooksPaginationLaodingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$NewestBooksPaginationLaodingImplCopyWithImpl<$Res>
+    extends _$NewestBooksStateCopyWithImpl<$Res,
+        _$NewestBooksPaginationLaodingImpl>
+    implements _$$NewestBooksPaginationLaodingImplCopyWith<$Res> {
+  __$$NewestBooksPaginationLaodingImplCopyWithImpl(
+      _$NewestBooksPaginationLaodingImpl _value,
+      $Res Function(_$NewestBooksPaginationLaodingImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$NewestBooksPaginationLaodingImpl
+    implements NewestBooksPaginationLaoding {
+  const _$NewestBooksPaginationLaodingImpl();
+
+  @override
+  String toString() {
+    return 'NewestBooksState.paginationloading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NewestBooksPaginationLaodingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() paginationloading,
+    required TResult Function(List<BookEntity> books) success,
+    required TResult Function(String errorMassage) failure,
+    required TResult Function(String errorMassage) paginationfailure,
+  }) {
+    return paginationloading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? paginationloading,
+    TResult? Function(List<BookEntity> books)? success,
+    TResult? Function(String errorMassage)? failure,
+    TResult? Function(String errorMassage)? paginationfailure,
+  }) {
+    return paginationloading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? paginationloading,
+    TResult Function(List<BookEntity> books)? success,
+    TResult Function(String errorMassage)? failure,
+    TResult Function(String errorMassage)? paginationfailure,
+    required TResult orElse(),
+  }) {
+    if (paginationloading != null) {
+      return paginationloading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(NewestBooksLaoding value) loading,
+    required TResult Function(NewestBooksPaginationLaoding value)
+        paginationloading,
+    required TResult Function(NewestBooksSuccess value) success,
+    required TResult Function(NewestBooksFailuer value) failure,
+    required TResult Function(NewestBooksPaginationFailuer value)
+        paginationfailure,
+  }) {
+    return paginationloading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(NewestBooksLaoding value)? loading,
+    TResult? Function(NewestBooksPaginationLaoding value)? paginationloading,
+    TResult? Function(NewestBooksSuccess value)? success,
+    TResult? Function(NewestBooksFailuer value)? failure,
+    TResult? Function(NewestBooksPaginationFailuer value)? paginationfailure,
+  }) {
+    return paginationloading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(NewestBooksLaoding value)? loading,
+    TResult Function(NewestBooksPaginationLaoding value)? paginationloading,
+    TResult Function(NewestBooksSuccess value)? success,
+    TResult Function(NewestBooksFailuer value)? failure,
+    TResult Function(NewestBooksPaginationFailuer value)? paginationfailure,
+    required TResult orElse(),
+  }) {
+    if (paginationloading != null) {
+      return paginationloading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class NewestBooksPaginationLaoding implements NewestBooksState {
+  const factory NewestBooksPaginationLaoding() =
+      _$NewestBooksPaginationLaodingImpl;
+}
+
+/// @nodoc
+abstract class _$$NewestBooksSuccessImplCopyWith<$Res> {
+  factory _$$NewestBooksSuccessImplCopyWith(_$NewestBooksSuccessImpl value,
+          $Res Function(_$NewestBooksSuccessImpl) then) =
+      __$$NewestBooksSuccessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<BookEntity> books});
 }
 
 /// @nodoc
-class __$$FeatuerdBooksSuccessImplCopyWithImpl<$Res>
-    extends _$NewestBooksStateCopyWithImpl<$Res, _$FeatuerdBooksSuccessImpl>
-    implements _$$FeatuerdBooksSuccessImplCopyWith<$Res> {
-  __$$FeatuerdBooksSuccessImplCopyWithImpl(_$FeatuerdBooksSuccessImpl _value,
-      $Res Function(_$FeatuerdBooksSuccessImpl) _then)
+class __$$NewestBooksSuccessImplCopyWithImpl<$Res>
+    extends _$NewestBooksStateCopyWithImpl<$Res, _$NewestBooksSuccessImpl>
+    implements _$$NewestBooksSuccessImplCopyWith<$Res> {
+  __$$NewestBooksSuccessImplCopyWithImpl(_$NewestBooksSuccessImpl _value,
+      $Res Function(_$NewestBooksSuccessImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -337,7 +512,7 @@ class __$$FeatuerdBooksSuccessImplCopyWithImpl<$Res>
   $Res call({
     Object? books = null,
   }) {
-    return _then(_$FeatuerdBooksSuccessImpl(
+    return _then(_$NewestBooksSuccessImpl(
       null == books
           ? _value._books
           : books // ignore: cast_nullable_to_non_nullable
@@ -348,9 +523,8 @@ class __$$FeatuerdBooksSuccessImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FeatuerdBooksSuccessImpl implements FeatuerdBooksSuccess {
-  const _$FeatuerdBooksSuccessImpl(final List<BookEntity> books)
-      : _books = books;
+class _$NewestBooksSuccessImpl implements NewestBooksSuccess {
+  const _$NewestBooksSuccessImpl(final List<BookEntity> books) : _books = books;
 
   final List<BookEntity> _books;
   @override
@@ -369,7 +543,7 @@ class _$FeatuerdBooksSuccessImpl implements FeatuerdBooksSuccess {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FeatuerdBooksSuccessImpl &&
+            other is _$NewestBooksSuccessImpl &&
             const DeepCollectionEquality().equals(other._books, _books));
   }
 
@@ -380,18 +554,19 @@ class _$FeatuerdBooksSuccessImpl implements FeatuerdBooksSuccess {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$FeatuerdBooksSuccessImplCopyWith<_$FeatuerdBooksSuccessImpl>
-      get copyWith =>
-          __$$FeatuerdBooksSuccessImplCopyWithImpl<_$FeatuerdBooksSuccessImpl>(
-              this, _$identity);
+  _$$NewestBooksSuccessImplCopyWith<_$NewestBooksSuccessImpl> get copyWith =>
+      __$$NewestBooksSuccessImplCopyWithImpl<_$NewestBooksSuccessImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() paginationloading,
     required TResult Function(List<BookEntity> books) success,
     required TResult Function(String errorMassage) failure,
+    required TResult Function(String errorMassage) paginationfailure,
   }) {
     return success(books);
   }
@@ -401,8 +576,10 @@ class _$FeatuerdBooksSuccessImpl implements FeatuerdBooksSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? paginationloading,
     TResult? Function(List<BookEntity> books)? success,
     TResult? Function(String errorMassage)? failure,
+    TResult? Function(String errorMassage)? paginationfailure,
   }) {
     return success?.call(books);
   }
@@ -412,8 +589,10 @@ class _$FeatuerdBooksSuccessImpl implements FeatuerdBooksSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? paginationloading,
     TResult Function(List<BookEntity> books)? success,
     TResult Function(String errorMassage)? failure,
+    TResult Function(String errorMassage)? paginationfailure,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -426,9 +605,13 @@ class _$FeatuerdBooksSuccessImpl implements FeatuerdBooksSuccess {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(FeatuerdBooksLaoding value) loading,
-    required TResult Function(FeatuerdBooksSuccess value) success,
-    required TResult Function(FeatuerdBooksFailuer value) failure,
+    required TResult Function(NewestBooksLaoding value) loading,
+    required TResult Function(NewestBooksPaginationLaoding value)
+        paginationloading,
+    required TResult Function(NewestBooksSuccess value) success,
+    required TResult Function(NewestBooksFailuer value) failure,
+    required TResult Function(NewestBooksPaginationFailuer value)
+        paginationfailure,
   }) {
     return success(this);
   }
@@ -437,9 +620,11 @@ class _$FeatuerdBooksSuccessImpl implements FeatuerdBooksSuccess {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(FeatuerdBooksLaoding value)? loading,
-    TResult? Function(FeatuerdBooksSuccess value)? success,
-    TResult? Function(FeatuerdBooksFailuer value)? failure,
+    TResult? Function(NewestBooksLaoding value)? loading,
+    TResult? Function(NewestBooksPaginationLaoding value)? paginationloading,
+    TResult? Function(NewestBooksSuccess value)? success,
+    TResult? Function(NewestBooksFailuer value)? failure,
+    TResult? Function(NewestBooksPaginationFailuer value)? paginationfailure,
   }) {
     return success?.call(this);
   }
@@ -448,9 +633,11 @@ class _$FeatuerdBooksSuccessImpl implements FeatuerdBooksSuccess {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(FeatuerdBooksLaoding value)? loading,
-    TResult Function(FeatuerdBooksSuccess value)? success,
-    TResult Function(FeatuerdBooksFailuer value)? failure,
+    TResult Function(NewestBooksLaoding value)? loading,
+    TResult Function(NewestBooksPaginationLaoding value)? paginationloading,
+    TResult Function(NewestBooksSuccess value)? success,
+    TResult Function(NewestBooksFailuer value)? failure,
+    TResult Function(NewestBooksPaginationFailuer value)? paginationfailure,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -460,31 +647,31 @@ class _$FeatuerdBooksSuccessImpl implements FeatuerdBooksSuccess {
   }
 }
 
-abstract class FeatuerdBooksSuccess implements NewestBooksState {
-  const factory FeatuerdBooksSuccess(final List<BookEntity> books) =
-      _$FeatuerdBooksSuccessImpl;
+abstract class NewestBooksSuccess implements NewestBooksState {
+  const factory NewestBooksSuccess(final List<BookEntity> books) =
+      _$NewestBooksSuccessImpl;
 
   List<BookEntity> get books;
   @JsonKey(ignore: true)
-  _$$FeatuerdBooksSuccessImplCopyWith<_$FeatuerdBooksSuccessImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$NewestBooksSuccessImplCopyWith<_$NewestBooksSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$FeatuerdBooksFailuerImplCopyWith<$Res> {
-  factory _$$FeatuerdBooksFailuerImplCopyWith(_$FeatuerdBooksFailuerImpl value,
-          $Res Function(_$FeatuerdBooksFailuerImpl) then) =
-      __$$FeatuerdBooksFailuerImplCopyWithImpl<$Res>;
+abstract class _$$NewestBooksFailuerImplCopyWith<$Res> {
+  factory _$$NewestBooksFailuerImplCopyWith(_$NewestBooksFailuerImpl value,
+          $Res Function(_$NewestBooksFailuerImpl) then) =
+      __$$NewestBooksFailuerImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String errorMassage});
 }
 
 /// @nodoc
-class __$$FeatuerdBooksFailuerImplCopyWithImpl<$Res>
-    extends _$NewestBooksStateCopyWithImpl<$Res, _$FeatuerdBooksFailuerImpl>
-    implements _$$FeatuerdBooksFailuerImplCopyWith<$Res> {
-  __$$FeatuerdBooksFailuerImplCopyWithImpl(_$FeatuerdBooksFailuerImpl _value,
-      $Res Function(_$FeatuerdBooksFailuerImpl) _then)
+class __$$NewestBooksFailuerImplCopyWithImpl<$Res>
+    extends _$NewestBooksStateCopyWithImpl<$Res, _$NewestBooksFailuerImpl>
+    implements _$$NewestBooksFailuerImplCopyWith<$Res> {
+  __$$NewestBooksFailuerImplCopyWithImpl(_$NewestBooksFailuerImpl _value,
+      $Res Function(_$NewestBooksFailuerImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -492,7 +679,7 @@ class __$$FeatuerdBooksFailuerImplCopyWithImpl<$Res>
   $Res call({
     Object? errorMassage = null,
   }) {
-    return _then(_$FeatuerdBooksFailuerImpl(
+    return _then(_$NewestBooksFailuerImpl(
       null == errorMassage
           ? _value.errorMassage
           : errorMassage // ignore: cast_nullable_to_non_nullable
@@ -503,8 +690,8 @@ class __$$FeatuerdBooksFailuerImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$FeatuerdBooksFailuerImpl implements FeatuerdBooksFailuer {
-  const _$FeatuerdBooksFailuerImpl(this.errorMassage);
+class _$NewestBooksFailuerImpl implements NewestBooksFailuer {
+  const _$NewestBooksFailuerImpl(this.errorMassage);
 
   @override
   final String errorMassage;
@@ -518,7 +705,7 @@ class _$FeatuerdBooksFailuerImpl implements FeatuerdBooksFailuer {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FeatuerdBooksFailuerImpl &&
+            other is _$NewestBooksFailuerImpl &&
             (identical(other.errorMassage, errorMassage) ||
                 other.errorMassage == errorMassage));
   }
@@ -529,18 +716,19 @@ class _$FeatuerdBooksFailuerImpl implements FeatuerdBooksFailuer {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$FeatuerdBooksFailuerImplCopyWith<_$FeatuerdBooksFailuerImpl>
-      get copyWith =>
-          __$$FeatuerdBooksFailuerImplCopyWithImpl<_$FeatuerdBooksFailuerImpl>(
-              this, _$identity);
+  _$$NewestBooksFailuerImplCopyWith<_$NewestBooksFailuerImpl> get copyWith =>
+      __$$NewestBooksFailuerImplCopyWithImpl<_$NewestBooksFailuerImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
+    required TResult Function() paginationloading,
     required TResult Function(List<BookEntity> books) success,
     required TResult Function(String errorMassage) failure,
+    required TResult Function(String errorMassage) paginationfailure,
   }) {
     return failure(errorMassage);
   }
@@ -550,8 +738,10 @@ class _$FeatuerdBooksFailuerImpl implements FeatuerdBooksFailuer {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
+    TResult? Function()? paginationloading,
     TResult? Function(List<BookEntity> books)? success,
     TResult? Function(String errorMassage)? failure,
+    TResult? Function(String errorMassage)? paginationfailure,
   }) {
     return failure?.call(errorMassage);
   }
@@ -561,8 +751,10 @@ class _$FeatuerdBooksFailuerImpl implements FeatuerdBooksFailuer {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
+    TResult Function()? paginationloading,
     TResult Function(List<BookEntity> books)? success,
     TResult Function(String errorMassage)? failure,
+    TResult Function(String errorMassage)? paginationfailure,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -575,9 +767,13 @@ class _$FeatuerdBooksFailuerImpl implements FeatuerdBooksFailuer {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(FeatuerdBooksLaoding value) loading,
-    required TResult Function(FeatuerdBooksSuccess value) success,
-    required TResult Function(FeatuerdBooksFailuer value) failure,
+    required TResult Function(NewestBooksLaoding value) loading,
+    required TResult Function(NewestBooksPaginationLaoding value)
+        paginationloading,
+    required TResult Function(NewestBooksSuccess value) success,
+    required TResult Function(NewestBooksFailuer value) failure,
+    required TResult Function(NewestBooksPaginationFailuer value)
+        paginationfailure,
   }) {
     return failure(this);
   }
@@ -586,9 +782,11 @@ class _$FeatuerdBooksFailuerImpl implements FeatuerdBooksFailuer {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(FeatuerdBooksLaoding value)? loading,
-    TResult? Function(FeatuerdBooksSuccess value)? success,
-    TResult? Function(FeatuerdBooksFailuer value)? failure,
+    TResult? Function(NewestBooksLaoding value)? loading,
+    TResult? Function(NewestBooksPaginationLaoding value)? paginationloading,
+    TResult? Function(NewestBooksSuccess value)? success,
+    TResult? Function(NewestBooksFailuer value)? failure,
+    TResult? Function(NewestBooksPaginationFailuer value)? paginationfailure,
   }) {
     return failure?.call(this);
   }
@@ -597,9 +795,11 @@ class _$FeatuerdBooksFailuerImpl implements FeatuerdBooksFailuer {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(FeatuerdBooksLaoding value)? loading,
-    TResult Function(FeatuerdBooksSuccess value)? success,
-    TResult Function(FeatuerdBooksFailuer value)? failure,
+    TResult Function(NewestBooksLaoding value)? loading,
+    TResult Function(NewestBooksPaginationLaoding value)? paginationloading,
+    TResult Function(NewestBooksSuccess value)? success,
+    TResult Function(NewestBooksFailuer value)? failure,
+    TResult Function(NewestBooksPaginationFailuer value)? paginationfailure,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -609,12 +809,180 @@ class _$FeatuerdBooksFailuerImpl implements FeatuerdBooksFailuer {
   }
 }
 
-abstract class FeatuerdBooksFailuer implements NewestBooksState {
-  const factory FeatuerdBooksFailuer(final String errorMassage) =
-      _$FeatuerdBooksFailuerImpl;
+abstract class NewestBooksFailuer implements NewestBooksState {
+  const factory NewestBooksFailuer(final String errorMassage) =
+      _$NewestBooksFailuerImpl;
 
   String get errorMassage;
   @JsonKey(ignore: true)
-  _$$FeatuerdBooksFailuerImplCopyWith<_$FeatuerdBooksFailuerImpl>
+  _$$NewestBooksFailuerImplCopyWith<_$NewestBooksFailuerImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$NewestBooksPaginationFailuerImplCopyWith<$Res> {
+  factory _$$NewestBooksPaginationFailuerImplCopyWith(
+          _$NewestBooksPaginationFailuerImpl value,
+          $Res Function(_$NewestBooksPaginationFailuerImpl) then) =
+      __$$NewestBooksPaginationFailuerImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String errorMassage});
+}
+
+/// @nodoc
+class __$$NewestBooksPaginationFailuerImplCopyWithImpl<$Res>
+    extends _$NewestBooksStateCopyWithImpl<$Res,
+        _$NewestBooksPaginationFailuerImpl>
+    implements _$$NewestBooksPaginationFailuerImplCopyWith<$Res> {
+  __$$NewestBooksPaginationFailuerImplCopyWithImpl(
+      _$NewestBooksPaginationFailuerImpl _value,
+      $Res Function(_$NewestBooksPaginationFailuerImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? errorMassage = null,
+  }) {
+    return _then(_$NewestBooksPaginationFailuerImpl(
+      null == errorMassage
+          ? _value.errorMassage
+          : errorMassage // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$NewestBooksPaginationFailuerImpl
+    implements NewestBooksPaginationFailuer {
+  const _$NewestBooksPaginationFailuerImpl(this.errorMassage);
+
+  @override
+  final String errorMassage;
+
+  @override
+  String toString() {
+    return 'NewestBooksState.paginationfailure(errorMassage: $errorMassage)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NewestBooksPaginationFailuerImpl &&
+            (identical(other.errorMassage, errorMassage) ||
+                other.errorMassage == errorMassage));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, errorMassage);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$NewestBooksPaginationFailuerImplCopyWith<
+          _$NewestBooksPaginationFailuerImpl>
+      get copyWith => __$$NewestBooksPaginationFailuerImplCopyWithImpl<
+          _$NewestBooksPaginationFailuerImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() paginationloading,
+    required TResult Function(List<BookEntity> books) success,
+    required TResult Function(String errorMassage) failure,
+    required TResult Function(String errorMassage) paginationfailure,
+  }) {
+    return paginationfailure(errorMassage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? paginationloading,
+    TResult? Function(List<BookEntity> books)? success,
+    TResult? Function(String errorMassage)? failure,
+    TResult? Function(String errorMassage)? paginationfailure,
+  }) {
+    return paginationfailure?.call(errorMassage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? paginationloading,
+    TResult Function(List<BookEntity> books)? success,
+    TResult Function(String errorMassage)? failure,
+    TResult Function(String errorMassage)? paginationfailure,
+    required TResult orElse(),
+  }) {
+    if (paginationfailure != null) {
+      return paginationfailure(errorMassage);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(NewestBooksLaoding value) loading,
+    required TResult Function(NewestBooksPaginationLaoding value)
+        paginationloading,
+    required TResult Function(NewestBooksSuccess value) success,
+    required TResult Function(NewestBooksFailuer value) failure,
+    required TResult Function(NewestBooksPaginationFailuer value)
+        paginationfailure,
+  }) {
+    return paginationfailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(NewestBooksLaoding value)? loading,
+    TResult? Function(NewestBooksPaginationLaoding value)? paginationloading,
+    TResult? Function(NewestBooksSuccess value)? success,
+    TResult? Function(NewestBooksFailuer value)? failure,
+    TResult? Function(NewestBooksPaginationFailuer value)? paginationfailure,
+  }) {
+    return paginationfailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(NewestBooksLaoding value)? loading,
+    TResult Function(NewestBooksPaginationLaoding value)? paginationloading,
+    TResult Function(NewestBooksSuccess value)? success,
+    TResult Function(NewestBooksFailuer value)? failure,
+    TResult Function(NewestBooksPaginationFailuer value)? paginationfailure,
+    required TResult orElse(),
+  }) {
+    if (paginationfailure != null) {
+      return paginationfailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class NewestBooksPaginationFailuer implements NewestBooksState {
+  const factory NewestBooksPaginationFailuer(final String errorMassage) =
+      _$NewestBooksPaginationFailuerImpl;
+
+  String get errorMassage;
+  @JsonKey(ignore: true)
+  _$$NewestBooksPaginationFailuerImplCopyWith<
+          _$NewestBooksPaginationFailuerImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
