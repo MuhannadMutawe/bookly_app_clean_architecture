@@ -42,7 +42,7 @@ class HomeRepoImplementation extends HomeRepo {
   }) async {
     try {
       List<BookEntity> books;
-      books = homeLocalDataSource.fetchNewestBooks();
+      books = homeLocalDataSource.fetchNewestBooks(pageNumber: pageNumber);
       if (books.isNotEmpty) {
         return right(books);
       }
