@@ -16,6 +16,7 @@ class HomeViewBody extends StatefulWidget {
 class _HomeViewBodyState extends State<HomeViewBody> {
   late final ScrollController _scrollController;
   var isLoading = false;
+  int pageNumber = 1;
 
   @override
   void initState() {
@@ -34,11 +35,11 @@ class _HomeViewBodyState extends State<HomeViewBody> {
     var currentPosition = _scrollController.position.pixels;
     var maxScrollExtent = _scrollController.position.maxScrollExtent;
     if (currentPosition >= 0.75 * maxScrollExtent) {
-      if (!isLoading) {
+      if (!isLoading && pageNumber == 1) {
         isLoading = true;
         await BlocProvider.of<NewestBooksCubit>(
           context,
-        ).fetchNewestBooks(pageNumber: 1);
+        ).fetchNewestBooks(pageNumber: pageNumber++);
         isLoading = false;
       }
     }
