@@ -4,6 +4,7 @@ import 'package:bookly_clean_arch/features/search/data/data_source/search_local_
 import 'package:bookly_clean_arch/features/search/data/data_source/search_remote_data_source.dart';
 import 'package:bookly_clean_arch/features/search/domain/repo/search_repo.dart';
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 
 class SearchRepoImplementation extends SearchRepo {
   final SearchLocalDataSource searchLocalDataSource;
@@ -15,8 +16,23 @@ class SearchRepoImplementation extends SearchRepo {
   });
 
   @override
-  Future<Either<Failure, List<BookEntity>>> fetchSearchBooks() {
-    // TODO: implement fetchSearchBooks
-    throw UnimplementedError();
+  Future<Either<Failure, List<BookEntity>>> fetchSearchBooks({
+    int pageNumber = 0,
+  }) async {
+    try {
+      List<BookEntity> books;
+      books = searchLocalDataSource.fetchSearchBooks(pageNumber: pageNumber);
+      if (books.isNotEmpty) {
+        return right(books);
+      }
+      books = await searchRemoteDataSource.fetchSearchBooks(
+        pageNumber: pageNumber,
+      );
+      return right(books);
+    } on DioException catch (error) {
+      return left(ServerFailure.fromDioException(error));
+    } catch (e) {
+      return left(ServerFailure(e.toString()));
+    }
   }
 }

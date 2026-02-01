@@ -5,7 +5,7 @@ import 'package:bookly_clean_arch/features/home/data/models/book_model/book_mode
 import 'package:bookly_clean_arch/features/home/domain/entities/book_entity.dart';
 
 abstract class SearchRemoteDataSource {
-  Future<List<BookEntity>> fetchFeaturedBooks({int pageNumber = 0});
+  Future<List<BookEntity>> fetchSearchBooks({int pageNumber = 0});
 }
 
 class SearchRemoteDataSourceImplementation extends SearchRemoteDataSource {
@@ -14,7 +14,7 @@ class SearchRemoteDataSourceImplementation extends SearchRemoteDataSource {
   SearchRemoteDataSourceImplementation(this._apiService);
 
   @override
-  Future<List<BookEntity>> fetchFeaturedBooks({int pageNumber = 0}) async {
+  Future<List<BookEntity>> fetchSearchBooks({int pageNumber = 0}) async {
     var data = await _apiService.get(
       endPoint:
           'volumes?Filtering=free-ebooks&Sorting=newest&q=programming&startIndex=${pageNumber * 10}',
