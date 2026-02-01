@@ -7,4 +7,5 @@ Future<void> setupHive() async {
   Hive.registerAdapter(BookEntityAdapter());
   await Hive.openBox<BookEntity>(kFeaturedBox);
   await Hive.openBox<BookEntity>(kNewestBox);
+  await Hive.openBox<BookEntity>(kSearchBox);
 }
