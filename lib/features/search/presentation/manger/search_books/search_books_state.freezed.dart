@@ -21,9 +21,9 @@ mixin _$SearchBooksState {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() paginationloading,
-    required TResult Function() success,
-    required TResult Function() failure,
-    required TResult Function() paginationfailure,
+    required TResult Function(List<BookEntity> books) success,
+    required TResult Function(String errorMassage) failure,
+    required TResult Function(String errorMassage) paginationfailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -31,9 +31,9 @@ mixin _$SearchBooksState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? paginationloading,
-    TResult? Function()? success,
-    TResult? Function()? failure,
-    TResult? Function()? paginationfailure,
+    TResult? Function(List<BookEntity> books)? success,
+    TResult? Function(String errorMassage)? failure,
+    TResult? Function(String errorMassage)? paginationfailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -41,9 +41,9 @@ mixin _$SearchBooksState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? paginationloading,
-    TResult Function()? success,
-    TResult Function()? failure,
-    TResult Function()? paginationfailure,
+    TResult Function(List<BookEntity> books)? success,
+    TResult Function(String errorMassage)? failure,
+    TResult Function(String errorMassage)? paginationfailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -141,9 +141,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() paginationloading,
-    required TResult Function() success,
-    required TResult Function() failure,
-    required TResult Function() paginationfailure,
+    required TResult Function(List<BookEntity> books) success,
+    required TResult Function(String errorMassage) failure,
+    required TResult Function(String errorMassage) paginationfailure,
   }) {
     return initial();
   }
@@ -154,9 +154,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? paginationloading,
-    TResult? Function()? success,
-    TResult? Function()? failure,
-    TResult? Function()? paginationfailure,
+    TResult? Function(List<BookEntity> books)? success,
+    TResult? Function(String errorMassage)? failure,
+    TResult? Function(String errorMassage)? paginationfailure,
   }) {
     return initial?.call();
   }
@@ -167,9 +167,9 @@ class _$InitialImpl implements _Initial {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? paginationloading,
-    TResult Function()? success,
-    TResult Function()? failure,
-    TResult Function()? paginationfailure,
+    TResult Function(List<BookEntity> books)? success,
+    TResult Function(String errorMassage)? failure,
+    TResult Function(String errorMassage)? paginationfailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -269,9 +269,9 @@ class _$SearchBooksLaodingImpl implements SearchBooksLaoding {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() paginationloading,
-    required TResult Function() success,
-    required TResult Function() failure,
-    required TResult Function() paginationfailure,
+    required TResult Function(List<BookEntity> books) success,
+    required TResult Function(String errorMassage) failure,
+    required TResult Function(String errorMassage) paginationfailure,
   }) {
     return loading();
   }
@@ -282,9 +282,9 @@ class _$SearchBooksLaodingImpl implements SearchBooksLaoding {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? paginationloading,
-    TResult? Function()? success,
-    TResult? Function()? failure,
-    TResult? Function()? paginationfailure,
+    TResult? Function(List<BookEntity> books)? success,
+    TResult? Function(String errorMassage)? failure,
+    TResult? Function(String errorMassage)? paginationfailure,
   }) {
     return loading?.call();
   }
@@ -295,9 +295,9 @@ class _$SearchBooksLaodingImpl implements SearchBooksLaoding {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? paginationloading,
-    TResult Function()? success,
-    TResult Function()? failure,
-    TResult Function()? paginationfailure,
+    TResult Function(List<BookEntity> books)? success,
+    TResult Function(String errorMassage)? failure,
+    TResult Function(String errorMassage)? paginationfailure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -402,9 +402,9 @@ class _$SearchBooksPaginationLaodingImpl
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() paginationloading,
-    required TResult Function() success,
-    required TResult Function() failure,
-    required TResult Function() paginationfailure,
+    required TResult Function(List<BookEntity> books) success,
+    required TResult Function(String errorMassage) failure,
+    required TResult Function(String errorMassage) paginationfailure,
   }) {
     return paginationloading();
   }
@@ -415,9 +415,9 @@ class _$SearchBooksPaginationLaodingImpl
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? paginationloading,
-    TResult? Function()? success,
-    TResult? Function()? failure,
-    TResult? Function()? paginationfailure,
+    TResult? Function(List<BookEntity> books)? success,
+    TResult? Function(String errorMassage)? failure,
+    TResult? Function(String errorMassage)? paginationfailure,
   }) {
     return paginationloading?.call();
   }
@@ -428,9 +428,9 @@ class _$SearchBooksPaginationLaodingImpl
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? paginationloading,
-    TResult Function()? success,
-    TResult Function()? failure,
-    TResult Function()? paginationfailure,
+    TResult Function(List<BookEntity> books)? success,
+    TResult Function(String errorMassage)? failure,
+    TResult Function(String errorMassage)? paginationfailure,
     required TResult orElse(),
   }) {
     if (paginationloading != null) {
@@ -495,6 +495,8 @@ abstract class _$$SearchBooksSuccessImplCopyWith<$Res> {
   factory _$$SearchBooksSuccessImplCopyWith(_$SearchBooksSuccessImpl value,
           $Res Function(_$SearchBooksSuccessImpl) then) =
       __$$SearchBooksSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<BookEntity> books});
 }
 
 /// @nodoc
@@ -504,26 +506,57 @@ class __$$SearchBooksSuccessImplCopyWithImpl<$Res>
   __$$SearchBooksSuccessImplCopyWithImpl(_$SearchBooksSuccessImpl _value,
       $Res Function(_$SearchBooksSuccessImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? books = null,
+  }) {
+    return _then(_$SearchBooksSuccessImpl(
+      null == books
+          ? _value._books
+          : books // ignore: cast_nullable_to_non_nullable
+              as List<BookEntity>,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$SearchBooksSuccessImpl implements SearchBooksSuccess {
-  const _$SearchBooksSuccessImpl();
+  const _$SearchBooksSuccessImpl(final List<BookEntity> books) : _books = books;
+
+  final List<BookEntity> _books;
+  @override
+  List<BookEntity> get books {
+    if (_books is EqualUnmodifiableListView) return _books;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_books);
+  }
 
   @override
   String toString() {
-    return 'SearchBooksState.success()';
+    return 'SearchBooksState.success(books: $books)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SearchBooksSuccessImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$SearchBooksSuccessImpl &&
+            const DeepCollectionEquality().equals(other._books, _books));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_books));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SearchBooksSuccessImplCopyWith<_$SearchBooksSuccessImpl> get copyWith =>
+      __$$SearchBooksSuccessImplCopyWithImpl<_$SearchBooksSuccessImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -531,11 +564,11 @@ class _$SearchBooksSuccessImpl implements SearchBooksSuccess {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() paginationloading,
-    required TResult Function() success,
-    required TResult Function() failure,
-    required TResult Function() paginationfailure,
+    required TResult Function(List<BookEntity> books) success,
+    required TResult Function(String errorMassage) failure,
+    required TResult Function(String errorMassage) paginationfailure,
   }) {
-    return success();
+    return success(books);
   }
 
   @override
@@ -544,11 +577,11 @@ class _$SearchBooksSuccessImpl implements SearchBooksSuccess {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? paginationloading,
-    TResult? Function()? success,
-    TResult? Function()? failure,
-    TResult? Function()? paginationfailure,
+    TResult? Function(List<BookEntity> books)? success,
+    TResult? Function(String errorMassage)? failure,
+    TResult? Function(String errorMassage)? paginationfailure,
   }) {
-    return success?.call();
+    return success?.call(books);
   }
 
   @override
@@ -557,13 +590,13 @@ class _$SearchBooksSuccessImpl implements SearchBooksSuccess {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? paginationloading,
-    TResult Function()? success,
-    TResult Function()? failure,
-    TResult Function()? paginationfailure,
+    TResult Function(List<BookEntity> books)? success,
+    TResult Function(String errorMassage)? failure,
+    TResult Function(String errorMassage)? paginationfailure,
     required TResult orElse(),
   }) {
     if (success != null) {
-      return success();
+      return success(books);
     }
     return orElse();
   }
@@ -615,7 +648,13 @@ class _$SearchBooksSuccessImpl implements SearchBooksSuccess {
 }
 
 abstract class SearchBooksSuccess implements SearchBooksState {
-  const factory SearchBooksSuccess() = _$SearchBooksSuccessImpl;
+  const factory SearchBooksSuccess(final List<BookEntity> books) =
+      _$SearchBooksSuccessImpl;
+
+  List<BookEntity> get books;
+  @JsonKey(ignore: true)
+  _$$SearchBooksSuccessImplCopyWith<_$SearchBooksSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -623,6 +662,8 @@ abstract class _$$SearchBooksFailuerImplCopyWith<$Res> {
   factory _$$SearchBooksFailuerImplCopyWith(_$SearchBooksFailuerImpl value,
           $Res Function(_$SearchBooksFailuerImpl) then) =
       __$$SearchBooksFailuerImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String errorMassage});
 }
 
 /// @nodoc
@@ -632,26 +673,52 @@ class __$$SearchBooksFailuerImplCopyWithImpl<$Res>
   __$$SearchBooksFailuerImplCopyWithImpl(_$SearchBooksFailuerImpl _value,
       $Res Function(_$SearchBooksFailuerImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? errorMassage = null,
+  }) {
+    return _then(_$SearchBooksFailuerImpl(
+      null == errorMassage
+          ? _value.errorMassage
+          : errorMassage // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$SearchBooksFailuerImpl implements SearchBooksFailuer {
-  const _$SearchBooksFailuerImpl();
+  const _$SearchBooksFailuerImpl(this.errorMassage);
+
+  @override
+  final String errorMassage;
 
   @override
   String toString() {
-    return 'SearchBooksState.failure()';
+    return 'SearchBooksState.failure(errorMassage: $errorMassage)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SearchBooksFailuerImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$SearchBooksFailuerImpl &&
+            (identical(other.errorMassage, errorMassage) ||
+                other.errorMassage == errorMassage));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, errorMassage);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SearchBooksFailuerImplCopyWith<_$SearchBooksFailuerImpl> get copyWith =>
+      __$$SearchBooksFailuerImplCopyWithImpl<_$SearchBooksFailuerImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -659,11 +726,11 @@ class _$SearchBooksFailuerImpl implements SearchBooksFailuer {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() paginationloading,
-    required TResult Function() success,
-    required TResult Function() failure,
-    required TResult Function() paginationfailure,
+    required TResult Function(List<BookEntity> books) success,
+    required TResult Function(String errorMassage) failure,
+    required TResult Function(String errorMassage) paginationfailure,
   }) {
-    return failure();
+    return failure(errorMassage);
   }
 
   @override
@@ -672,11 +739,11 @@ class _$SearchBooksFailuerImpl implements SearchBooksFailuer {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? paginationloading,
-    TResult? Function()? success,
-    TResult? Function()? failure,
-    TResult? Function()? paginationfailure,
+    TResult? Function(List<BookEntity> books)? success,
+    TResult? Function(String errorMassage)? failure,
+    TResult? Function(String errorMassage)? paginationfailure,
   }) {
-    return failure?.call();
+    return failure?.call(errorMassage);
   }
 
   @override
@@ -685,13 +752,13 @@ class _$SearchBooksFailuerImpl implements SearchBooksFailuer {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? paginationloading,
-    TResult Function()? success,
-    TResult Function()? failure,
-    TResult Function()? paginationfailure,
+    TResult Function(List<BookEntity> books)? success,
+    TResult Function(String errorMassage)? failure,
+    TResult Function(String errorMassage)? paginationfailure,
     required TResult orElse(),
   }) {
     if (failure != null) {
-      return failure();
+      return failure(errorMassage);
     }
     return orElse();
   }
@@ -743,7 +810,13 @@ class _$SearchBooksFailuerImpl implements SearchBooksFailuer {
 }
 
 abstract class SearchBooksFailuer implements SearchBooksState {
-  const factory SearchBooksFailuer() = _$SearchBooksFailuerImpl;
+  const factory SearchBooksFailuer(final String errorMassage) =
+      _$SearchBooksFailuerImpl;
+
+  String get errorMassage;
+  @JsonKey(ignore: true)
+  _$$SearchBooksFailuerImplCopyWith<_$SearchBooksFailuerImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -752,6 +825,8 @@ abstract class _$$SearchBooksPaginationFailuerImplCopyWith<$Res> {
           _$SearchBooksPaginationFailuerImpl value,
           $Res Function(_$SearchBooksPaginationFailuerImpl) then) =
       __$$SearchBooksPaginationFailuerImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String errorMassage});
 }
 
 /// @nodoc
@@ -763,28 +838,54 @@ class __$$SearchBooksPaginationFailuerImplCopyWithImpl<$Res>
       _$SearchBooksPaginationFailuerImpl _value,
       $Res Function(_$SearchBooksPaginationFailuerImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? errorMassage = null,
+  }) {
+    return _then(_$SearchBooksPaginationFailuerImpl(
+      null == errorMassage
+          ? _value.errorMassage
+          : errorMassage // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$SearchBooksPaginationFailuerImpl
     implements SearchBooksPaginationFailuer {
-  const _$SearchBooksPaginationFailuerImpl();
+  const _$SearchBooksPaginationFailuerImpl(this.errorMassage);
+
+  @override
+  final String errorMassage;
 
   @override
   String toString() {
-    return 'SearchBooksState.paginationfailure()';
+    return 'SearchBooksState.paginationfailure(errorMassage: $errorMassage)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SearchBooksPaginationFailuerImpl);
+            other is _$SearchBooksPaginationFailuerImpl &&
+            (identical(other.errorMassage, errorMassage) ||
+                other.errorMassage == errorMassage));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, errorMassage);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SearchBooksPaginationFailuerImplCopyWith<
+          _$SearchBooksPaginationFailuerImpl>
+      get copyWith => __$$SearchBooksPaginationFailuerImplCopyWithImpl<
+          _$SearchBooksPaginationFailuerImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -792,11 +893,11 @@ class _$SearchBooksPaginationFailuerImpl
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function() paginationloading,
-    required TResult Function() success,
-    required TResult Function() failure,
-    required TResult Function() paginationfailure,
+    required TResult Function(List<BookEntity> books) success,
+    required TResult Function(String errorMassage) failure,
+    required TResult Function(String errorMassage) paginationfailure,
   }) {
-    return paginationfailure();
+    return paginationfailure(errorMassage);
   }
 
   @override
@@ -805,11 +906,11 @@ class _$SearchBooksPaginationFailuerImpl
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function()? paginationloading,
-    TResult? Function()? success,
-    TResult? Function()? failure,
-    TResult? Function()? paginationfailure,
+    TResult? Function(List<BookEntity> books)? success,
+    TResult? Function(String errorMassage)? failure,
+    TResult? Function(String errorMassage)? paginationfailure,
   }) {
-    return paginationfailure?.call();
+    return paginationfailure?.call(errorMassage);
   }
 
   @override
@@ -818,13 +919,13 @@ class _$SearchBooksPaginationFailuerImpl
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function()? paginationloading,
-    TResult Function()? success,
-    TResult Function()? failure,
-    TResult Function()? paginationfailure,
+    TResult Function(List<BookEntity> books)? success,
+    TResult Function(String errorMassage)? failure,
+    TResult Function(String errorMassage)? paginationfailure,
     required TResult orElse(),
   }) {
     if (paginationfailure != null) {
-      return paginationfailure();
+      return paginationfailure(errorMassage);
     }
     return orElse();
   }
@@ -876,6 +977,12 @@ class _$SearchBooksPaginationFailuerImpl
 }
 
 abstract class SearchBooksPaginationFailuer implements SearchBooksState {
-  const factory SearchBooksPaginationFailuer() =
+  const factory SearchBooksPaginationFailuer(final String errorMassage) =
       _$SearchBooksPaginationFailuerImpl;
+
+  String get errorMassage;
+  @JsonKey(ignore: true)
+  _$$SearchBooksPaginationFailuerImplCopyWith<
+          _$SearchBooksPaginationFailuerImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
