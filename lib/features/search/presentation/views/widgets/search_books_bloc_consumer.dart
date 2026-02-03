@@ -1,3 +1,4 @@
+import 'package:bookly_clean_arch/core/widgets/custom_error_widget.dart';
 import 'package:bookly_clean_arch/core/widgets/shimmer_books_list_view.dart';
 import 'package:bookly_clean_arch/features/home/domain/entities/book_entity.dart';
 import 'package:bookly_clean_arch/features/search/presentation/manger/search_books/search_books_cubit.dart';
@@ -58,7 +59,7 @@ class _SearchBooksBlocConsumerState extends State<SearchBooksBlocConsumer> {
             );
           },
           failure: (errorMassage) {
-            return ErrorWidget(errorMassage);
+            return CustomErrorWidget(errorMassage: errorMassage);
           },
           paginationfailure: (errorMassage) {
             return ResultSearchListView(

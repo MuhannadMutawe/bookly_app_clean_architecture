@@ -24,8 +24,8 @@ class BooksImageviewItem extends StatelessWidget {
           imageUrl: imageUrl,
           fit: BoxFit.fill,
           placeholder: (context, url) => Shimmer.fromColors(
-            baseColor: Colors.grey.shade500,
-            highlightColor: Colors.grey.shade300,
+            baseColor: Colors.grey.shade700,
+            highlightColor: Colors.grey.shade500,
             child: AspectRatio(
               aspectRatio: 2.7 / 4,
             ),

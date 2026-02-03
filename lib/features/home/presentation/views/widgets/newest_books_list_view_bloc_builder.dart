@@ -1,3 +1,4 @@
+import 'package:bookly_clean_arch/core/widgets/custom_error_widget.dart';
 import 'package:bookly_clean_arch/core/widgets/shimmer_books_list_view.dart';
 import 'package:bookly_clean_arch/features/home/domain/entities/book_entity.dart';
 import 'package:bookly_clean_arch/features/home/presentation/manger/newest_books/newest_books_cubit.dart';
@@ -64,7 +65,7 @@ class _NewestBooksListViewBlocBuilderState
             );
           },
           failure: (errorMassage) {
-            return ErrorWidget(errorMassage);
+            return CustomErrorWidget(errorMassage: errorMassage);
           },
         );
       },
