@@ -46,7 +46,9 @@ class _SearchBooksBlocConsumerState extends State<SearchBooksBlocConsumer> {
             return SizedBox.shrink();
           },
           loading: () {
-            return ShimmerBooksListView();
+            return ShimmerBooksListView(
+              physics: BouncingScrollPhysics(),
+            );
           },
           paginationloading: () {
             return ResultSearchListView(
