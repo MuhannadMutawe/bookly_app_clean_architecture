@@ -48,16 +48,22 @@ class _SearchBooksBlocConsumerState extends State<SearchBooksBlocConsumer> {
             return ShimmerBooksListView();
           },
           paginationloading: () {
-            return ResultSearchListView();
+            return ResultSearchListView(
+              books: books,
+            );
           },
           success: (books) {
-            return ResultSearchListView();
+            return ResultSearchListView(
+              books: this.books,
+            );
           },
           failure: (errorMassage) {
             return ErrorWidget(errorMassage);
           },
           paginationfailure: (errorMassage) {
-            return ResultSearchListView();
+            return ResultSearchListView(
+              books: books,
+            );
           },
         );
       },

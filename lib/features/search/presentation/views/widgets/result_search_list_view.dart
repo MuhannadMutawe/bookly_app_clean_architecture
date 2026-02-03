@@ -3,27 +3,24 @@ import 'package:bookly_clean_arch/features/home/presentation/views/widgets/newes
 import 'package:flutter/material.dart';
 
 class ResultSearchListView extends StatelessWidget {
-  const ResultSearchListView({super.key});
+  const ResultSearchListView({
+    super.key,
+    required this.books,
+  });
+
+  final List<BookEntity> books;
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       padding: EdgeInsets.zero,
-      shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
-      itemCount: 10,
+      physics: BouncingScrollPhysics(),
+      itemCount: books.length,
       itemBuilder: (context, index) {
         return Padding(
           padding: EdgeInsets.symmetric(vertical: 10),
           child: NewestBookListViewItem(
-            book: BookEntity(
-              authorName: '',
-              bookId: '',
-              image: '',
-              price: 0,
-              rating: 10,
-              title: 'adf',
-            ),
+            book: books[index],
           ),
         );
       },

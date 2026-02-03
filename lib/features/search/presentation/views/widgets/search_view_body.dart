@@ -1,6 +1,6 @@
 import 'package:bookly_clean_arch/core/utils/styles.dart';
 import 'package:bookly_clean_arch/features/search/presentation/views/widgets/custom_search_text_field.dart';
-import 'package:bookly_clean_arch/features/search/presentation/views/widgets/result_search_list_view.dart';
+import 'package:bookly_clean_arch/features/search/presentation/views/widgets/search_books_bloc_consumer.dart';
 import 'package:flutter/material.dart';
 
 class SearchViewBody extends StatelessWidget {
@@ -8,9 +8,8 @@ class SearchViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return Padding(
       padding: const EdgeInsets.only(right: 30, left: 30, top: 20),
-      physics: BouncingScrollPhysics(),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -25,7 +24,9 @@ class SearchViewBody extends StatelessWidget {
           SizedBox(
             height: 16,
           ),
-          ResultSearchListView(),
+          Expanded(
+            child: SearchBooksBlocConsumer(),
+          ),
         ],
       ),
     );
