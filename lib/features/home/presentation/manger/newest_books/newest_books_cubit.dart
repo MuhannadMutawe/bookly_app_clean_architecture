@@ -14,7 +14,7 @@ class NewestBooksCubit extends Cubit<NewestBooksState> {
     } else {
       emit(NewestBooksState.paginationloading());
     }
-    var result = await _fetchNewestBooksUseCases.call();
+    var result = await _fetchNewestBooksUseCases.call(pageNumber);
     result.fold(
       (failure) {
         if (pageNumber == 0) {

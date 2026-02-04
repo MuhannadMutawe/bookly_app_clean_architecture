@@ -1,7 +1,9 @@
+import 'package:bookly_clean_arch/core/utils/app_router.dart';
 import 'package:bookly_clean_arch/core/utils/assets.dart';
 import 'package:bookly_clean_arch/features/home/domain/entities/book_entity.dart';
 import 'package:bookly_clean_arch/features/home/presentation/views/widgets/books_image_view_item.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SimillerBooksListView extends StatelessWidget {
   const SimillerBooksListView({super.key, required this.books});
@@ -18,8 +20,16 @@ class SimillerBooksListView extends StatelessWidget {
         physics: BouncingScrollPhysics(),
         itemBuilder: (context, index) => Padding(
           padding: EdgeInsets.symmetric(horizontal: 8),
-          child: BooksImageviewItem(
-            imageUrl: books[index].image ?? AssetsData.imageFormNetwork,
+          child: GestureDetector(
+            onTap: () {
+              context.push(
+                AppRouter.kbookDetailsView,
+                extra: books[index],
+              );
+            },
+            child: BooksImageviewItem(
+              imageUrl: books[index].image ?? AssetsData.imageFormNetwork,
+            ),
           ),
         ),
       ),

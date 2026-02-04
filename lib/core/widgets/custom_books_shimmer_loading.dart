@@ -1,5 +1,3 @@
-import 'package:bookly_clean_arch/core/utils/assets.dart';
-import 'package:bookly_clean_arch/features/home/presentation/views/widgets/books_image_view_item.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
@@ -22,8 +20,16 @@ class CustomBooksShimmerLoading extends StatelessWidget {
           physics: BouncingScrollPhysics(),
           itemBuilder: (context, index) => Padding(
             padding: EdgeInsets.symmetric(horizontal: 8),
-            child: BooksImageviewItem(
-              imageUrl: AssetsData.imageFormNetwork,
+            child: AspectRatio(
+              aspectRatio: 2.7 / 4,
+              child: Container(
+                clipBehavior: Clip.antiAlias,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(18),
+                  border: Border.all(color: Colors.black, width: 1.7),
+                  color: Colors.grey.shade700,
+                ),
+              ),
             ),
           ),
         ),
