@@ -4,13 +4,13 @@ import 'package:bookly_clean_arch/features/home/domain/entities/book_entity.dart
 import 'package:bookly_clean_arch/features/search/domain/repo/search_repo.dart';
 import 'package:dartz/dartz.dart';
 
-class FetchSearchBooksUseCases extends UseCase<List<BookEntity>, NoParam> {
+class FetchSearchBooksUseCases extends UseCase<List<BookEntity>, int> {
   final SearchRepo _searchRepo;
 
   FetchSearchBooksUseCases(this._searchRepo);
 
   @override
-  Future<Either<Failure, List<BookEntity>>> call([NoParam? param]) async {
-    return await _searchRepo.fetchSearchBooks();
+  Future<Either<Failure, List<BookEntity>>> call([int pageNumber = 0]) async {
+    return await _searchRepo.fetchSearchBooks(pageNumber: pageNumber);
   }
 }

@@ -14,7 +14,7 @@ class SearchBooksCubit extends Cubit<SearchBooksState> {
     } else {
       emit(SearchBooksState.paginationloading());
     }
-    var result = await _fetchSearchBooksUseCases.call();
+    var result = await _fetchSearchBooksUseCases.call(pageNumber);
     result.fold(
       (failure) {
         if (pageNumber == 0) {
