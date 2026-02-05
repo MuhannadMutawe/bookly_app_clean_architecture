@@ -20,6 +20,9 @@ class SimillerBooksSection extends StatelessWidget {
           height: 25,
         ),
         FetchSimillerBooksBlocBuilder(),
+        SizedBox(
+          height: 25,
+        ),
       ],
     );
   }

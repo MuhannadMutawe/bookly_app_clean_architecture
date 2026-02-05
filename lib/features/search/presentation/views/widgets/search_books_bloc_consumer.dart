@@ -8,7 +8,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SearchBooksBlocConsumer extends StatefulWidget {
-  const SearchBooksBlocConsumer({super.key});
+  const SearchBooksBlocConsumer({
+    super.key,
+    required this.searchValue,
+    this.isSearch = false,
+  });
+
+  final bool isSearch;
+  final String searchValue;
 
   @override
   State<SearchBooksBlocConsumer> createState() =>
@@ -52,12 +59,12 @@ class _SearchBooksBlocConsumerState extends State<SearchBooksBlocConsumer> {
           },
           paginationloading: () {
             return ResultSearchListView(
-              books: books,
+              books: searcherBooks(),
             );
           },
           success: (books) {
             return ResultSearchListView(
-              books: this.books,
+              books: searcherBooks(),
             );
           },
           failure: (errorMassage) {
@@ -65,11 +72,26 @@ class _SearchBooksBlocConsumerState extends State<SearchBooksBlocConsumer> {
           },
           paginationfailure: (errorMassage) {
             return ResultSearchListView(
-              books: books,
+              books: searcherBooks(),
             );
           },
         );
       },
     );
+  }
+
+  List<BookEntity> searcherBooks() {
+    List<BookEntity> books = [];
+    if (widget.isSearch) {
+      books = this.books
+          .where(
+            (element) =>
+                element.title.toLowerCase().contains(widget.searchValue),
+          )
+          .toList();
+      return books;
+    }
+    books = this.books;
+    return books;
   }
 }

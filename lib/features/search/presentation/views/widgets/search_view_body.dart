@@ -3,8 +3,28 @@ import 'package:bookly_clean_arch/features/search/presentation/views/widgets/cus
 import 'package:bookly_clean_arch/features/search/presentation/views/widgets/search_books_bloc_consumer.dart';
 import 'package:flutter/material.dart';
 
-class SearchViewBody extends StatelessWidget {
+class SearchViewBody extends StatefulWidget {
   const SearchViewBody({super.key});
+
+  @override
+  State<SearchViewBody> createState() => _SearchViewBodyState();
+}
+
+class _SearchViewBodyState extends State<SearchViewBody> {
+  late TextEditingController _controller;
+  String _searchValue = '';
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +33,13 @@ class SearchViewBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomSearchTextField(),
+          CustomSearchTextField(
+            controller: _controller,
+            onChanged: (value) {
+              _searchValue = value;
+              setState(() {});
+            },
+          ),
           SizedBox(
             height: 16,
           ),
@@ -25,7 +51,10 @@ class SearchViewBody extends StatelessWidget {
             height: 16,
           ),
           Expanded(
-            child: SearchBooksBlocConsumer(),
+            child: SearchBooksBlocConsumer(
+              searchValue: _searchValue.toLowerCase(),
+              isSearch: _controller.text.isNotEmpty,
+            ),
           ),
         ],
       ),
