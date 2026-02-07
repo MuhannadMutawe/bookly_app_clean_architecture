@@ -31,6 +31,7 @@ class BookModel extends BookEntity {
          price: 0.0,
          rating: volumeInfo!.averageRating,
          title: volumeInfo.title!,
+         previewLink: volumeInfo.previewLink,
        );
 
   factory BookModel.fromJson(Map<String, dynamic> json) => BookModel(

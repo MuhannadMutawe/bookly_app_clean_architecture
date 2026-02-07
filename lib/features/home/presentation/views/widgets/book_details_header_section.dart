@@ -7,7 +7,10 @@ import 'package:bookly_clean_arch/features/home/presentation/views/widgets/books
 import 'package:flutter/material.dart';
 
 class BookDetailsHeaderSection extends StatelessWidget {
-  const BookDetailsHeaderSection({super.key, required this.book});
+  const BookDetailsHeaderSection({
+    super.key,
+    required this.book,
+  });
 
   final BookEntity book;
 
@@ -54,7 +57,9 @@ class BookDetailsHeaderSection extends StatelessWidget {
         SizedBox(
           height: 20,
         ),
-        BookActions(),
+        BookActions(
+          book: book,
+        ),
       ],
     );
   }
