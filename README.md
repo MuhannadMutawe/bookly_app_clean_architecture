@@ -28,7 +28,7 @@ This project showcases my ability to:
 
 ## 🚀 App Preview
 
-> Replace these images with real screenshots from the app
+> Some screenshots from app for home , details & search secreen.
 
 <p align="center">
   <img src="assets/screenshots/home.png" width="240" />
