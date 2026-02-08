@@ -1,16 +1,93 @@
-# bookly_clean_arch
+# 📚 Bookly App
 
-A new Flutter project.
+### Production-Ready Flutter App | Clean Architecture | BLoC
 
-## Getting Started
+![Flutter](https://img.shields.io/badge/Flutter-3.x-blue?logo=flutter)
+![Dart](https://img.shields.io/badge/Dart-3.x-blue?logo=dart)
+![Architecture](https://img.shields.io/badge/Architecture-Clean-success)
+![State](https://img.shields.io/badge/State%20Management-BLoC-purple)
+![Platform](https://img.shields.io/badge/Platforms-Android%20%7C%20iOS-lightgrey)
+![Status](https://img.shields.io/badge/Project-Portfolio-brightgreen)
 
-This project is a starting point for a Flutter application.
+> A scalable and maintainable Flutter application built using Clean Architecture and BLoC.
+> This project demonstrates real-world Flutter development practices suitable for production and hiring evaluation.
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 👀 Why This Project
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project showcases my ability to:
+
+- Build production-ready Flutter applications
+- Apply Clean Architecture principles
+- Use BLoC for predictable state management
+- Structure large-scale Flutter projects
+- Handle API integration and local caching
+- Write clean, maintainable, and testable code
+
+---
+
+## 🚀 App Preview
+
+> Replace these images with real screenshots from the app
+
+<p align="center">
+  <img src="assets/screenshots/home.png" width="240" />
+  <img src="assets/screenshots/details.png" width="240" />
+  <img src="assets/screenshots/search.png" width="240" />
+</p>
+
+---
+
+## ✨ Features
+
+- Browse featured and newest books
+- Search for books using remote API
+- Clean and modern UI
+- Shimmer loading effects
+- Offline caching with Hive
+- BLoC-based state management
+- REST API integration
+- Clean Architecture implementation
+
+---
+
+## 🧠 Architecture Overview
+
+This project follows **Uncle Bob’s Clean Architecture**, ensuring separation of concerns and scalability.
+
+### Layers
+
+#### Presentation Layer
+
+- Flutter UI (Screens & Widgets)
+- BLoC (Events & States)
+- Handles user interactions
+
+#### Domain Layer
+
+- Business logic (Use Cases)
+- Entities
+- Repository contracts
+
+#### Data Layer
+
+- Remote data source (Dio)
+- Local data source (Hive)
+- Models and repository implementations
+
+---
+
+## 🛠️ Tech Stack
+
+| Category               | Technology         |
+| ---------------------- | ------------------ |
+| Framework              | Flutter            |
+| Language               | Dart               |
+| Architecture           | Clean Architecture |
+| State Management       | BLoC               |
+| Networking             | Dio                |
+| Local Storage          | Hive               |
+| Dependency Injection   | GetIt              |
+| Functional Programming | Dartz              |
+| Navigation             | GoRouter           |
