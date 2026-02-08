@@ -7,7 +7,6 @@
 ![Architecture](https://img.shields.io/badge/Architecture-Clean-success)
 ![State](https://img.shields.io/badge/State%20Management-BLoC-purple)
 ![Platform](https://img.shields.io/badge/Platforms-Android%20%7C%20iOS-lightgrey)
-![Status](https://img.shields.io/badge/Project-Portfolio-brightgreen)
 
 > A scalable and maintainable Flutter application built using Clean Architecture and BLoC.
 > This project demonstrates real-world Flutter development practices suitable for production and hiring evaluation.
@@ -91,3 +90,9 @@ This project follows **Uncle Bob’s Clean Architecture**, ensuring separation o
 | Dependency Injection   | GetIt              |
 | Functional Programming | Dartz              |
 | Navigation             | GoRouter           |
+
+---
+
+## 👨‍💻 Author
+
+Bookly Flutter App – v1.0.0
